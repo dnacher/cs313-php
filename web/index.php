@@ -20,14 +20,13 @@
 		</div>
 
 	<div class="button-center">
-		<form action="http://google.com">
-			<button type="submit" class="btn btn-primary">Introduction</button><br><br>
-    		<!--<input type="submit" value="Go to Google" />-->
+		<form action="introduction.php">
+			<button type="submit" class="btn btn-primary">Introduction</button><br><br>    		
 		</form>
 
-
-		
-		<button type="button" class="btn btn-primary">Prjects for cs313</button>
+		<form action="projects.php.php">
+			<button type="submit" class="btn btn-primary">Prjects for cs313</button>
+		</form>
 	</div>
 
 	</body>

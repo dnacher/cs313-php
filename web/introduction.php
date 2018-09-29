@@ -28,8 +28,8 @@
   					<br>I'm from Uruguay a little country between Argentina and Brazil<br>
   					in my free time I like to solve Rubik's cube and play guitar.<br>
   					I'm working as a Java developer in a .com company.</p>
-  					This is my family!
-  					<img src="/source/family.jpg">
+  					This is my family!<br>
+  					<img src="/source/family.jpg" width="900" height="700">
   			</div>
 		</div>
 		

@@ -20,7 +20,13 @@
 		</div>
 
 	<div class="button-center">
-		<button type="button" class="btn btn-primary">Introduction</button><br><br>
+		<form action="http://google.com">
+			<button type="submit" class="btn btn-primary">Introduction</button><br><br>
+    		<!--<input type="submit" value="Go to Google" />-->
+		</form>
+
+
+		
 		<button type="button" class="btn btn-primary">Prjects for cs313</button>
 	</div>
 

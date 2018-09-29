@@ -15,6 +15,8 @@
 	</head>
 	<body>
 		<?php echo '<h1>This is my main page from php!</h1>'; ?>
-
+		<div class="alert alert-primary" role="alert">
+		  This is an Alert from bootstrap!
+		</div>
 	</body>
 </html>

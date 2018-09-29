@@ -17,12 +17,12 @@
 		<?php echo '<h1>Introduction</h1>'; ?>
 		<div class="row no-gutters">
 			<br><br><br>
-  			<div class="col-3">
+  			<div class="col-2">
   				<form action="index.php">
 					<button type="submit" class="btn btn-primary">Index</button><br><br>    		
 				</form>
   			</div>  			
-  			<div class="col-9">
+  			<div class="col-10">
   				<div class="introduction">
   					<p>Hello my name is Daniel, This is my page to introduce myself.
   					I'm from Uruguay a little country between Argentina and Brazil

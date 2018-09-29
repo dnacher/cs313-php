@@ -18,5 +18,8 @@
 		<div class="alert alert-primary" role="alert">
 		  This is an Alert from bootstrap!
 		</div>
+
+		<button type="button" class="btn btn-primary">Introduction</button><br>
+		<button type="button" class="btn btn-primary">Prjects for cs313</button>
 	</body>
 </html>

@@ -17,14 +17,14 @@
 		<?php echo '<h1>This is my main page from php!</h1>'; ?>
 		<div class="row no-gutters">
 			<br><br><br>
-  			<div class="col-12 col-sm-6 col-md-8">
+  			<div class="col-3">
   				<form action="index.php">
 					<button type="submit" class="btn btn-primary">Index</button><br><br>    		
 				</form>
   			</div>  			
-  			<div class="col-6 col-md-4">
+  			<div class="col-9">
   				<h2>Projects</h2>
-  				<h3> ups...we don't have nothing yet! <a href="index.php">do you want to come back?</a></h3>
+  				<p> ups...we don't have nothing yet! <a href="index.php">do you want to come back?</a></p>
   			</div>
 		</div>
 

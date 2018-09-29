@@ -1,0 +1,15 @@
+body {
+	background-color: #2B579A;
+}
+
+h1{
+	text-align: center;
+}
+
+.divs{
+	font-weight: normal;
+}
+
+.divs:hover {
+	font-weight: bold;	
+}

@@ -19,8 +19,10 @@
 		  This is an Alert from bootstrap!
 		</div>
 
+	<div class="button-center">
 		<button type="button" class="btn btn-primary">Introduction</button><br><br>
+		<button type="button" class="btn btn-primary">Prjects for cs313</button>
+	</div>
 
-		<button type="button" class="btn btn-primary button-center">Prjects for cs313</button>
 	</body>
 </html>

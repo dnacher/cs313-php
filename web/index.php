@@ -24,7 +24,7 @@
 			<button type="submit" class="btn btn-primary">Introduction</button><br><br>    		
 		</form>
 
-		<form action="projects.php.php">
+		<form action="projects.php">
 			<button type="submit" class="btn btn-primary">Prjects for cs313</button>
 		</form>
 	</div>

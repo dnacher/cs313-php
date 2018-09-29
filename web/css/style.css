@@ -13,3 +13,7 @@ h1{
 .divs:hover {
 	font-weight: bold;	
 }
+
+.button-center{
+	text-align: center;
+}

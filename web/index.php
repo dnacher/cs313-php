@@ -19,7 +19,8 @@
 		  This is an Alert from bootstrap!
 		</div>
 
-		<button type="button" class="btn btn-primary">Introduction</button><br>
-		<button type="button" class="btn btn-primary">Prjects for cs313</button>
+		<button class="button-center" type="button" class="btn btn-primary">Introduction</button><br><br>
+
+		<button class="button-center" type="button" class="btn btn-primary">Prjects for cs313</button>
 	</body>
 </html>

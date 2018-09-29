@@ -14,6 +14,7 @@
 		
 	</head>
 	<body class="body">
+		<?php echo '<h1>This is my main page from php!</h1>'; ?>
 		<div class="row no-gutters">
   			<div class="col-12 col-sm-6 col-md-8">
   				<form action="index.php">
@@ -25,7 +26,7 @@
   			</div>
 		</div>
 
-		<?php echo '<h1>This is my main page from php!</h1>'; ?>
+		
 
 	</body>
 </html>

@@ -15,9 +15,7 @@
 Welcome <?php echo $_GET["name"]; ?><br>
 Your email address is: <?php echo $_GET["email"]; ?>
 
-		<form action="Index.php">
-			<button type="submit" class="btn btn-primary">Index</button>
-		</form>
+		<a href="index.php">Index</a>
 
 </body>
 </html>

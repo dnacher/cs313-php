@@ -1,0 +1,47 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://salty-falls-70357.herokuapp.com/
+
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/dnacher/cs313-php
+
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+I create the index with 2 buttons. One for the introduction where I create a paragraph and add an image.
+the other page is projects where I'm going to put the list of all projects. From now I have only a link to go back to the index page
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+I think I did all the things I had to do for the assignment.
+
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I start working with bootstrap. I think is very interesting how easy to use is.
+
+6. What is the difference between an HTTP Get and Post? When should each be used?
+
+get is to receive information and post is to add information.
+we should use get when we need to receive information.
+for example if I want to know the information of a user I could do it with get.
+If I want to add another user I should use post.
+
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+I don't know if I reach to E but I think is between D and E, because I have all the pages and I use buttons, links and images. I also use bootstrap.
+I did some things with css and js
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I already did that in the last question.

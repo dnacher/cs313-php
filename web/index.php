@@ -25,7 +25,7 @@
 		</form>
 
 		<form action="projects.php">
-			<button type="submit" class="btn btn-primary">Projects for cs313</button>
+			<button type="submit" class="btn btn-primary">Projects for cs313</button><br><br>    	
 		</form>
 
 		<form action="form.php">

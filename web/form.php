@@ -41,7 +41,7 @@
 		<input type="submit">
 		</form>	
 
-		<form action="form_post.php" method="post">
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			Form Post <br>
 			Name: <input type="text" name="name"><br>
 			<span class="error">* <?php echo $nameErr;?></span>
@@ -52,8 +52,6 @@
 		<input type="submit">
 		</form>
 
-		<form action="Index.php">
-			<button type="submit" class="btn btn-primary">Index</button>
-		</form>
+		<a href="index.php">Index</a>
 	</body>
 </html>

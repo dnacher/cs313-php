@@ -44,7 +44,11 @@
 		<form action="form_post.php" method="post">
 			Form Post <br>
 			Name: <input type="text" name="name"><br>
+			<span class="error">* <?php echo $nameErr;?></span>
+			<br><br>
 			E-mail: <input type="text" name="email"><br>
+			<span class="error">* <?php echo $emailErr;?></span>
+			<br><br>
 		<input type="submit">
 		</form>
 

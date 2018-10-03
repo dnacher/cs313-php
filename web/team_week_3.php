@@ -104,8 +104,7 @@ foreach ($cb1 as $value) {
     
 }
 
-?>
-    
+?>    
     
 </body>
 </html>

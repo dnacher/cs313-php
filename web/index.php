@@ -29,8 +29,15 @@
 		</form>
 
 		<form action="form.php">
-			<button type="submit" class="btn btn-primary">Form Page</button>
+			<button type="submit" class="btn btn-primary">Form Page</button><br><br> 
 		</form>
+
+
+		<form action="team_week_3.php">
+			<button type="submit" class="btn btn-primary">Team 7 Week 3</button><br><br> 
+		</form>
+
+
 	</div>
 
 	</body>

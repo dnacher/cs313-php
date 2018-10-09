@@ -3,8 +3,10 @@
     include('header.php');
 ?>
 
-<h1>We will send these items</h1>
-<h2>Your order will be shipped to <?php echo htmlspecialchars($_POST["street"]); ?>!</h2>
+<div class="alert alert-primary" role="alert">
+    <h3>We will send these items</h3>
+    <h5>Your purchase will be shipped to <?php echo htmlspecialchars($_POST["street"]); ?>!</h5>
+</div>
 
 <?php
     echo "<p>Your purchase: </p><ul>";
@@ -12,11 +14,9 @@
         echo "<li><div class=\"alert alert-primary\" role=\"alert\">$value</div></li>";
     }
     echo "</ul>";
-session_destroy(); 
+    session_destroy(); 
 ?>
-
 <a href="items_list.php">Return to Shopping</a>
-
 <?php
    include('footer.php')
 ?>

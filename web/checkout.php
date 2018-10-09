@@ -35,7 +35,7 @@
   }
 ?>
 
-<a href="cart.php">View Cart</a>
+<a href="cart.php">Cart</a><br>
 <a href="items_list.php">Continue Shopping</a>
 
 <?php

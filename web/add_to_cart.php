@@ -13,7 +13,6 @@
 	}
 
 	print_r($_SESSION['myproducts']);
-	
 	header("Location: https://salty-falls-70357.herokuapp.com/items_list.php");
 	die();
 ?>

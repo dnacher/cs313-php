@@ -30,19 +30,19 @@
 
 		<!-- fill the table with products -->
 		<?php
-  			for ($x = 0; $x < $productCount; $x++) {
-    			$found = strpos(strtolower($products[$x]), strtolower($_GET["search"]));
-    			if (!isset($_GET["search"]) || empty($_GET["search"]) || $found !== false ) {
-        			echo '<div class="product">
-			        <h3>' . ucfirst($products[$x]) . '</h3>
-			        <h4> $' . number_format($prices[$x], 2) . '</h4>
+		  	for ($x = 0; $x < $productCount; $x++) {
+		    	$found = strpos(strtolower($products[$x]), strtolower($_GET["search"]));
+			    if (!isset($_GET["search"]) || empty($_GET["search"]) || $found !== false ) {
+			        echo '<div class="product">
+			        <h2>' . ucfirst($products[$x]) . '</h2>
+			        <h3> $' . number_format($prices[$x], 2) . '</h3>
 			        <form action="addToCart.php" method="get">
-			        	<input type="hidden" name="product" value="' . $products[$x] . '"></input>
-			        	<input type="submit" class="btn btn-primary"> value="add to cart"></input>
-        			</form>
-        			</div>';
-    			}
-  			}
+			        <input type="hidden" name="product" value="' . $products[$x] . '"></input>
+			        <input type="submit" value="add to cart"></input>
+			        </form>
+			        </div>';
+			    }
+		  	}
 		?>
 
 

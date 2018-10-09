@@ -14,6 +14,6 @@
 
 	print_r($_SESSION['myproducts']);
 	
-	header("Location: http://localhost/cs313/browse.php");
+	header("Location: https://salty-falls-70357.herokuapp.com/item_list.php");
 	die();
 ?>

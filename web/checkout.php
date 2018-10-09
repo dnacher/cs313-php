@@ -1,22 +1,20 @@
 <?php
-    // Start the session
     session_start();
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Cache-Control: post-check=0, pre-check=0", false);
-    header("Pragma: no-cache");
     include('header.php');
 ?>
 
-<h2>Confirm that you want to checkout these items?</h2>
+<div class="alert alert-primary" role="alert">
+  <h2>Confirm that you want to checkout these items?</h2>
+</div>
 
 <?php
   if (count($_SESSION['myproducts']) == 0) {
       echo "<p>Your cart is empty</p>";
   }  
   else {
-      echo "<p>You have:</p><ul>";
+      echo "<p>Purchase:</p><ul>";
       foreach ($_SESSION['myproducts'] as $value) {
-          echo "<li>$value</li>";
+          echo "<div class=\"alert alert-success\" role=\"alert\"><li>$value</li></div>";
       }
       echo "</ul>";
   }

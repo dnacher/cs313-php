@@ -23,7 +23,7 @@
 			<button type="submit" class="btn btn-primary">Checkout</button><br><br>    		
 		</form><br><br><br>
 		<!-- search button -->
-		<form action="browse.php" method="get">
+		<form action="items_list.php" method="get">
 		    Search: <input type="text" name="search" value="<?php echo $_GET["search"] ?>">
 		    <input type="submit" class="btn btn-primary" value="Search">
 		</form>

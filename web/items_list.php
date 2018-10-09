@@ -38,7 +38,7 @@
 			        <h4> $' . number_format($prices[$x], 2) . '</h4>
 			        <form action="addToCart.php" method="get">
 			        <input type="hidden" name="product" value="' . $products[$x] . '"></input>
-			        <input type="submit" value="add to cart"></input>
+			        <input type="submit" class="btn btn-primary" value="add to cart"></input>
 			        </form>
 			        </div>';
 			    }

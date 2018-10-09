@@ -33,14 +33,18 @@
 		  	for ($x = 0; $x < $productCount; $x++) {
 		    	$found = strpos(strtolower($products[$x]), strtolower($_GET["search"]));
 			    if (!isset($_GET["search"]) || empty($_GET["search"]) || $found !== false ) {
-			        echo '<div class="product">
-			        <h3>' . ucfirst($products[$x]) . '</h3>
-			        <h4> $' . number_format($prices[$x], 2) . '</h4>
-			        <form action="addToCart.php" method="get">
-			        <input type="hidden" name="product" value="' . $products[$x] . '"></input>
-			        <input type="submit" class="btn btn-primary" value="add to cart"></input>
-			        </form>
-			        </div>';
+			        echo '<div class="row">
+					        <div class="col">
+						        <h3>' . ucfirst($products[$x]) . '</h3>
+						        <h4> $' . number_format($prices[$x], 2) . '</h4>
+					        </div>
+					        <div class="col">
+						        <form action="addToCart.php" method="get">
+						        <input type="hidden" name="product" value="' . $products[$x] . '"></input>
+						        <input type="submit" class="btn btn-primary" value="Add to cart"></input><br><br>
+						        </form>
+					        </div>
+				        </div>';
 			    }
 		  	}
 		?>

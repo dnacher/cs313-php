@@ -34,7 +34,7 @@
 ?>
 
 <a href="cart.php">View Cart</a>
-<a href="browse.php">Continue Shopping</a>
+<a href="items_list.php">Continue Shopping</a>
 
 <?php
    include('footer.php')

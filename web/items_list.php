@@ -24,7 +24,7 @@
 		</form><br><br><br>
 		<!-- search button -->
 		<form action="browse.php" method="get">
-    		Search: <input type="text" name="search" value="<?php echo $_GET["search"] ?>">
+    		Search: <input type="text" name="search" class="btn btn-secondary"> value="<?php echo $_GET["search"] ?>">
     		<input type="submit" value="Search">
 		</form>
 
@@ -34,11 +34,11 @@
     			$found = strpos(strtolower($products[$x]), strtolower($_GET["search"]));
     			if (!isset($_GET["search"]) || empty($_GET["search"]) || $found !== false ) {
         			echo '<div class="product">
-			        <h2>' . ucfirst($products[$x]) . '</h2>
-			        <h3> $' . number_format($prices[$x], 2) . '</h3>
+			        <h3>' . ucfirst($products[$x]) . '</h3>
+			        <h4> $' . number_format($prices[$x], 2) . '</h4>
 			        <form action="addToCart.php" method="get">
 			        	<input type="hidden" name="product" value="' . $products[$x] . '"></input>
-			        	<input type="submit" value="add to cart"></input>
+			        	<input type="submit" class="btn btn-primary"> value="add to cart"></input>
         			</form>
         			</div>';
     			}

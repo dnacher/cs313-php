@@ -27,7 +27,7 @@
         <div class=\"row\">Street: <input required type=\"text\" name=\"street\"></div> <br>
         <div class=\"row\">State: <input type=\"text\" name=\"state\"></div> <br>
         <div class=\"row\">City: <input type=\"text\" name=\"city\"></div> <br>
-        <input type=\"submit\" value=\"Confirm Order\">
+        <input type=\"submit\" class=\"btn btn-primary\" value=\"Confirm Order\">
     </form></div>";
   }
   else {

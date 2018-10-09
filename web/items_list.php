@@ -24,8 +24,8 @@
 		</form><br><br><br>
 		<!-- search button -->
 		<form action="browse.php" method="get">
-    		Search: <input type="text" name="search"> value="<?php echo $_GET["search"] ?>">
-    		<input type="submit" class="btn btn-secondary" value="Search">
+		    Search: <input type="text" name="search" value="<?php echo $_GET["search"] ?>">
+		    <input type="submit" value="Search">
 		</form>
 
 		<!-- fill the table with products -->

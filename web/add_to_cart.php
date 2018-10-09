@@ -1,6 +1,5 @@
 <?php
    session_start();
-   include('header.php');
 ?>
 
 <?php
@@ -14,7 +13,7 @@
 	}
 
 	print_r($_SESSION['myproducts']);
+	
+	header("Location: http://localhost/cs313/browse.php");
 	die();
-
-	include('footer.php');
 ?>

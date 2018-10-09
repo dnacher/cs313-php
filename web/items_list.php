@@ -39,7 +39,7 @@
 							        <h4> $' . number_format($prices[$x], 2) . '</h4>
 						        </div>
 						        <div class="col">
-							        <form action="addToCart.php" method="get">
+							        <form action="add_to_cart.php" method="get">
 							        <input type="hidden" name="product" value="' . $products[$x] . '"></input>
 							        <input type="submit" class="btn btn-primary" value="Add to cart"></input><br><br>
 							        </form>

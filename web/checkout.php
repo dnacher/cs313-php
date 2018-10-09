@@ -22,8 +22,6 @@
 
 <?php
   if (count($_SESSION['myproducts']) != 0) {
-    echo "<p>Your Cart is Empty</p>";
-    // With more time, validation would be a nice feature
     echo "<div class=\"checkout\"><h1>Checkout:</h1><form action=\"confirmed.php\" method=\"post\">
         Street: <input required type=\"text\" name=\"street\"> <br>
         State: <input type=\"text\" name=\"state\"> <br>

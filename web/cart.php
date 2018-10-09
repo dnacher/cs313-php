@@ -19,7 +19,7 @@
   }
 ?>
 
-<a href="browse.php">Browse</a>
+<a href="items_list.php">Go back to items</a><br>
 <a href="checkout.php">Checkout</a>
 
 <?php

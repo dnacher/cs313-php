@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Index</title>
-		<link rel="stylesheet" href="/css/style.css">
-		
-		<!-- BEGIN bootstrap -->		 
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
-		<link rel="stylesheet" href="bootstrap.min.js">
-		<!-- END   bootstrap -->
-		<script src="/js/js.js"></script>
-
-
-		
-	</head>
+<?php
+	include('header.php');
+?>
 	<body class="body">
 		<?php echo '<h1>This is my main page from php!</h1>'; ?>
 		<div class="alert alert-primary" role="alert">
-		  This is an Alert from bootstrap!
+		  Shopping Cart
 		</div>
 
 	<div class="button-center">
@@ -39,6 +27,4 @@
 
 
 	</div>
-
-	</body>
-</html>
+<?php include('footer.php') ?>

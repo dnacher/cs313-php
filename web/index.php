@@ -37,6 +37,9 @@
 			<button type="submit" class="btn btn-primary">Team 7 Week 3</button><br><br> 
 		</form>
 
+		<form action="shopping_cart.php">
+			<button type="submit" class="btn btn-primary">Shopping Cart</button><br><br> 
+		</form>
 
 	</div>
 

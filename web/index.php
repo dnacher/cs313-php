@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Index</title>
-		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/library/css/style.css">
 		
 		<!-- BEGIN bootstrap 		 
 		<link rel="stylesheet" href="/css/bootstrap.min.css">

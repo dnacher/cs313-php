@@ -9,14 +9,14 @@
 
 <h2>Login</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
 
-<div id="id01" class="modal">
+<div id="loginForm" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/library/images/login_icon.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>

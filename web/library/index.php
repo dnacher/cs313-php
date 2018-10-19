@@ -13,7 +13,16 @@
 
 	<body class="body">
 		<div class="wrapper">
-    		<button class="button">Login</button>
+    		<form action="/library">
+    			<div class="form-group">
+	    			<label for="formUserName">User</label>
+	    			<input type="text" class="form-control" id="txtUser" placeholder="User name">
+	    			<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+
+	    			<a href="#" class="btn btn-lg btn-secondary">Login</a><br><br>
+					<button type="submit" class="btn btn-primary">Login 2</button><br><br>    		
+				</div>
+			</form>
 		</div>	
 	</body>
 		

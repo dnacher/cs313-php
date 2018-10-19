@@ -40,7 +40,8 @@ button:hover {
 }
 
 img.avatar {
-    width: 40%;
+    width:"50"; 
+    height:"50"
     border-radius: 50%;
 }
 

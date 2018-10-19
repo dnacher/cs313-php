@@ -16,7 +16,7 @@
   <form class="modal-content animate" action="/action_page.php">
     <div class="imgcontainer">
       <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="/library/images/login_icon.png" alt="Avatar" class="avatar">
+      <img src="/library/images/login_icon.png" alt="Avatar" class="avatar" width="50" height="50">
     </div>
 
     <div class="container">

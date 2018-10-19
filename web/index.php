@@ -2,11 +2,10 @@
 <html>
 	<head>
 		<title>Index</title>
-		<link rel="stylesheet" href="/library/css/style.css">
-		
-		<!-- BEGIN bootstrap 		 
+		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
-		<link rel="stylesheet" href="bootstrap.min.js">
+		<link rel="stylesheet" href="/css/bootstrap.min.js">
+		<!-- BEGIN bootstrap 		 
 		END   bootstrap 
 		<script src="/js/js.js"></script> -->
 

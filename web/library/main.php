@@ -35,19 +35,20 @@ catch (PDOException $ex)
 
 $statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
 $statement->execute();
-echo '<div class="list-group">';
+//echo '<div class="list-group">';
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
+  echo '<p>' . $row['name'] . '</p>';
+  /*echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
   echo    '<div class="d-flex w-100 justify-content-between">';
   echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
   echo        '<small>' . $row['item_id'] . '</small>';
   echo    '</div>'
   echo  '<p class="mb-1">' . $row[description] . '</p>';
   echo  '<small>' . $row[item_type_id]. '</small>';
-  echo '</a>';
+  echo '</a>';*/
 }
-echo '</div>';
+//echo '</div>';
 ?>
 
 

@@ -50,8 +50,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
   echo        '<small>' . $row['item_id'] . '</small>';
   //echo    '</div>'
-  /*echo  '<p class="mb-1">' . $row[description] . '</p>';
-  echo  '<small>' . $row[item_type_id]. '</small>';*/
+  echo  '<p class="mb-1">' . $row[description] . '</p>';
+  echo  '<small>' . $row[item_type_id]. '</small>';
   echo '</a>';
 }
 echo '</div>';

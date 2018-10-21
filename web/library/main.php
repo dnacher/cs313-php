@@ -29,13 +29,13 @@ catch (PDOException $ex)
 <body>
 <div>
 
-<h1>Scripture Resources</h1>
+<h1>Books Available</h1>
 
 <?php
 
 $statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
 $statement->execute();
-//echo '<div class="list-group">';
+echo '<div class="list-group">';
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   echo '<p>' . $row['name'] . '</p>';
@@ -48,7 +48,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   echo  '<small>' . $row[item_type_id]. '</small>';
   echo '</a>';*/
 }
-//echo '</div>';
+echo '</div>';
 ?>
 
 

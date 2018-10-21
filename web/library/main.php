@@ -47,12 +47,13 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
   /*d-flex w-100 justify-content-between*/
-  echo '<div class="d-flex">';
+  echo '<div class="d-flex w-100 justify-content-between">';
   echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
   echo        '<small>' . $row['item_id'] . '</small>';
   echo    '</div>'
   echo  '<p class="mb-1">' . $row[description] . '</p>';
   echo  '<small>' . $row[item_type_id]. '</small>';
+  echo '</div>'
   echo '</a>';
 }
 echo '</div>';

@@ -3,12 +3,12 @@ require("dbconnect.php");
 $db = get_db();
 
 $txtName = $_POST['txtName'];
-$txtDescription = $_POST['txtDescription'];
+/*$txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
 $author = $_POST['cmbAuthor'];
 $id = 1;
 $active = true;
-
+*/
 try{
 	
 	$statement = $db->prepare("select max (item_id) as max from item");
@@ -18,12 +18,12 @@ try{
     }
     $id = $id +1;
 echo $txtName;
-echo $txtDescription;
+/*echo $txtDescription;
 echo $cmbItemType;
 echo $author;
 echo $id;
 echo $active;
-
+*/
   /*  $query = 'INSERT INTO item(item_id,item_type_id, name, description, author_id,active) 
     		  VALUES(:id, :cmbItemType, :txtName, :txtDescription, :cmbAuthor,:active)';
 	$statement = $db->prepare($query);

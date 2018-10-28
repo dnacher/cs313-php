@@ -40,7 +40,7 @@
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';          
           echo '<form action="deleteItem.php" method=POST>
-                <input type="hidden" value="' . $row['item_id'] . '" name="id_item" />
+                <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';
         }

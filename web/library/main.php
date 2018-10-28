@@ -23,6 +23,7 @@
 
 <?php
 
+echo 'aqui';
 
 
 //$statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
@@ -41,8 +42,7 @@
   echo '</a>';
 }
 echo '</div>';*/
-$test getTest();
-echo $test;
+
 ?>
 
 

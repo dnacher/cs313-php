@@ -23,7 +23,7 @@
 <form action="addItem.php" method="post">
 
       <div class="form-group">
-        <label for="txtName">Name</label>
+        <label>Name</label>
         <input type="text" class="form-control" name="txtName" placeholder="Name of the item">
       </div>
       <div class="form-group">

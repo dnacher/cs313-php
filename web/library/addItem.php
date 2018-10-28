@@ -3,7 +3,7 @@
 /*$txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];*/
-require("dbConnect.php");
+require("dbconnect.php");
 $db = get_db();
 
 try{

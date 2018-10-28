@@ -37,7 +37,7 @@
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';
-          echo '<a href="deleteItem.php?id="' . $row['item_id'] . ' class="list-group-item list-group-item-action flex-column align-items-start active">X</a>';
+          echo '<a href="deleteItem.php?id="' . $row['item_id'] . '" class="list-group-item list-group-item-action flex-column align-items-start active">X</a>';
         }
         echo '</div>';
     ?>

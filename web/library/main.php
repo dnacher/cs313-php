@@ -24,7 +24,7 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT i.item_id, it.name,i.name, au.name
+        $statement = $db->prepare("SELECT i.item_id as item_id, it.name as item_type_name,i.name as item_name, au.name as author_name
                                    FROM item i
                                    JOIN author au on au.author_id=i.author_id
                                    JOIN item_type it on i.item_type_id=it.item_type_id");
@@ -33,7 +33,7 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex w-100 justify-content-between">';
-          echo        '<h5 class="mb-1">' . $row[0] . '</h5>';
+          echo        '<h5 class="mb-1">' . $row['item_id'] . '</h5>';
           echo        '<small>' . $row['it.name'] . '</small>';
           echo  '</div>';
           echo  '<p class="mb-1">' . $row[au.name] . '</p>';

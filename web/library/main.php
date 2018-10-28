@@ -1,6 +1,6 @@
 <?php
   require("dbconnect.php");
- // $db = get_db();
+  $db = get_db();
 
 ?>
 <!DOCTYPE html>
@@ -9,11 +9,12 @@
   <title>Main Page</title>
   <link rel="stylesheet" href="/library/css/style.css">
 
-  <!-- BEGIN bootstrap -->     
+    <!-- BEGIN bootstrap -->     
     <link rel="stylesheet" href="/library/css/bootstrap.min.css">
     <link rel="stylesheet" href="/library/js/bootstrap.min.js">
     <!-- END   bootstrap -->
     <script src="/library/js/js.js"></script>
+    
 </head>
 
 <body>

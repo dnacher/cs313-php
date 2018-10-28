@@ -6,7 +6,7 @@ $cmbItemType = $_POST['cmbItemType'];*/
 require("dbconnect.php");
 $db = get_db();
 
-try{
+//try{
 	echo "hola";
 	/*$statement = $db->prepare("select max (item_id) from item");
 	$statement->execute();

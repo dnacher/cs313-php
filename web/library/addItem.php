@@ -9,6 +9,7 @@ $db = get_db();
 try{
 	$statement = $db->prepare("select max (item_id) as max from item");
 	$statement->execute();
+	$row = mysql_fetch_array($statement);
 	$id = $row['max'];
 	echo "esto es: " . $id;
 }catch (Exception $ex){

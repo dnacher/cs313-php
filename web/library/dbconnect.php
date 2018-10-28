@@ -19,4 +19,8 @@ function get_db() {
 	return $db;
 }
 
+function getTest(){
+	return "hola";
+}
+
 ?>

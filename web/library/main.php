@@ -1,6 +1,6 @@
 <?php
   require("/library/dbConnect.php");
-  $db = get_db();
+ // $db = get_db();
 
 ?>
 <!DOCTYPE html>
@@ -23,8 +23,10 @@
 
 <?php
 
-$statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
-$statement->execute();
+
+
+//$statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
+//$statement->execute();
 //echo '<div class="list-group">';
 /*while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
@@ -39,7 +41,8 @@ $statement->execute();
   echo '</a>';
 }
 echo '</div>';*/
-echo 'aqui';
+$test getTest();
+echo $test;
 ?>
 
 

@@ -56,7 +56,7 @@
           ?>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Add item</button>
+      <input type="submit" value="Add Item" />
     </form>
 
 </body>

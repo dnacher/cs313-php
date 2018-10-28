@@ -44,10 +44,10 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="cmbAuthor">Item Type</label>
+        <label for="cmbAuthor">Author</label>
         <select multiple class="form-control" id="cmbAuthor">
           <?php
-            $statement = $db->prepare("SELECT author_id, name FROM item_type WHERE active=true");
+            $statement = $db->prepare("SELECT author_id, name FROM author");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
               echo '<option  value=' .$row[author_id] . '>' . $row['name'] . '</option>';

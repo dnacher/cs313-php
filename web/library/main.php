@@ -34,10 +34,10 @@
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex w-100 justify-content-between">';
           echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
-          echo        '<small>' . $row['item_type_name'] . '</small>';
+          echo        '<small>' . $row['item_id'] . '</small>';
           echo  '</div>';
-          echo  '<p class="mb-1">' . $row['item_id'] . '</p>';
-          echo  '<small>' . $row['author_name']. '</small>';
+          echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
+          echo  '<small>' . $row['item_type_name']. '</small>';
           echo '</a>';
         }
         echo '</div>';

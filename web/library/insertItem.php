@@ -24,7 +24,7 @@
 
       <div class="form-group">
         <label>Name</label>
-        <input type="text" class="form-control" name="txtName" placeholder="Name of the item">
+        <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name of the item">
       </div>
       <div class="form-group">
         <label for="txtDescription">Description</label>

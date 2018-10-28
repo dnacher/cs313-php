@@ -1,5 +1,8 @@
 <?php
 
+$name = $_POST['name'];
+echo $name;
+/*
 $txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
@@ -30,12 +33,12 @@ try{
 	$statement->bindValue(':cmbAuthor', $cmbAuthor);
 	$statement->bindValue(':active', $active);
 	
-	$statement->execute();*/
+	$statement->execute();
 
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();
 }
 //header("Location: main.php");
-die(); 
+die(); */
 ?>

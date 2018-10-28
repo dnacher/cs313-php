@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Main Page</title>
   <link rel="stylesheet" href="/library/css/style.css">
@@ -62,4 +63,3 @@ E-mail: <input type="text" name="email"><br>
       <input type="submit" value="Add Item" />
     </form>
 */
-</body>

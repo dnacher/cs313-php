@@ -1,16 +1,16 @@
 <?php
 
-$txtName = $_POST['txtName'];
+/*$txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
-$cmbItemType = $_POST['cmbItemType'];
+$cmbItemType = $_POST['cmbItemType'];*/
 require("dbConnect.php");
 $db = get_db();
 
 try{
 	$statement = $db->prepare("select max (item_id) from item");
 	$statement->execute();
-	$id = row[item_id];
-	echo $id;
+	//$id = row[item_id];
+	//echo $id;
 }catch (Exception $ex){
 	// Please be aware that you don't want to output the Exception message in
 	// a production environment

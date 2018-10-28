@@ -41,5 +41,5 @@ echo $active;
 	die();
 }
 //header("Location: main.php");
-die(); */
+die(); 
 ?>

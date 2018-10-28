@@ -20,7 +20,7 @@
 
 <body>
   
-<form action="addItem.php" method="post">
+<form action="addItem.php" method="POST">
 
       <div class="form-group">
         <label>Name</label>

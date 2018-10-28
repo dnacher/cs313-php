@@ -6,15 +6,12 @@ $cmbItemType = $_POST['cmbItemType'];*/
 require("dbconnect.php");
 $db = get_db();
 
-//try{
-	echo "hola";
-	/*$statement = $db->prepare("select max (item_id) from item");
+try{
+	$statement = $db->prepare("select max (item_id) from item");
 	$statement->execute();
-	//$id = row[item_id];
+	$id = row[item_id];
 	//echo $id;
 }catch (Exception $ex){
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
 	echo "Error with DB. Details: $ex";
 	die();
 }

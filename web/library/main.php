@@ -37,7 +37,7 @@
           echo        '<small>' . $row['it.name'] . '</small>';
           echo  '</div>';
           echo  '<p class="mb-1">' . $row[au.name] . '</p>';
-          echo  '<small>' . $row[item_type_id]. '</small>';
+          echo  '<small>' . $row[i.name]. '</small>';
           echo '</a>';
         }
         echo '</div>';

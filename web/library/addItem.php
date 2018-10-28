@@ -5,7 +5,7 @@ $db = get_db();
 $txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
-$author = $_POST['cmbAuthor'];
+$cmbAuthor = $_POST['cmbAuthor'];
 $id = 1;
 $active = true;
 

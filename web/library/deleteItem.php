@@ -2,7 +2,7 @@
 require("dbconnect.php");
 $db = get_db();
 
-$id = $POST['id_item'];
+$id = $_POST['id_item'];
 
 try{
 	echo $id;	

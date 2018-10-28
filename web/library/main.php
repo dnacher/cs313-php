@@ -42,4 +42,9 @@
         }
         echo '</div>';
     ?>
+
+    <form action="/library/insertItem.php">
+      <button type="submit" class="btn btn-primary">Add Item</button><br><br>        
+    </form>
+
   </div>

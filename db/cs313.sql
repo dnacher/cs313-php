@@ -43,3 +43,12 @@ CREATE TABLE rent_table (
 	date_end DATE,
 	stock INTEGER
 );
+
+CREATE TABLE author (
+	author_id INTEGER PRIMARY KEY,
+	name VARCHAR(100),
+	description VARCHAR(160)
+);
+
+ALTER TABLE public.item ADD author_id integer NOT NULL;
+ALTER TABLE public.item ADD CONSTRAINT item_author_fk FOREIGN KEY (author_id) REFERENCES public.author(author_id);

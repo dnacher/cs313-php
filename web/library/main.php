@@ -24,16 +24,19 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
+        $statement = $db->prepare("SELECT i.item_id, it.name,i.name, au.name, 
+                                   FROM item i
+                                   JOIN author au on au.author_id=i.author_id
+                                   JOIN item_type it on i.item_type_id=it.item_type_id");
         $statement->execute();
         echo '<div class="list-group">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex w-100 justify-content-between">';
           echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
-          echo        '<small>' . $row['item_id'] . '</small>';
+          echo        '<small>' . $row['it.name'] . '</small>';
           echo  '</div>';
-          echo  '<p class="mb-1">' . $row[description] . '</p>';
+          echo  '<p class="mb-1">' . $row[au.name] . '</p>';
           echo  '<small>' . $row[item_type_id]. '</small>';
           echo '</a>';
         }

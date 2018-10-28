@@ -6,10 +6,11 @@ $id = $_POST['id_item'];
 
 try{
 	$query = 'DELETE item WHERE id_item=:id';
-	$statement = $db->prepare($query);
+	echo $query;
+	/*$statement = $db->prepare($query);
 	$statement->bindValue(':id', $id);
 	
-	$statement->execute();
+	$statement->execute();*/
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();

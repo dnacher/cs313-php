@@ -10,7 +10,7 @@ $id = 1;
 $active = true;
 
 
-try{
+//try{
 	echo $txtName;
 	/*
 	$statement = $db->prepare("select max (item_id) as max from item");

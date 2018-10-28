@@ -5,16 +5,15 @@ $db = get_db();
 $id = $_POST['id_item'];
 
 try{
-	$query = 'DELETE item WHERE id_item=:id';
+	$query = 'DELETE item WHERE id_item=$id';
 	
 	$statement = $db->prepare($query);
-	$statement->bindValue(':id', $id);
-	echo $statement;
-	/*$statement->execute();*/
+	//$statement->bindValue(':id', $id);
+	$statement->execute();
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();
 }
-//header("Location: main.php");
+header("Location: main.php");
 die(); 
 ?>

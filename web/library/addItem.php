@@ -9,7 +9,7 @@ $db = get_db();
 try{
 	$statement = $db->prepare("select max (item_id) from item");
 	$statement->execute();
-	$id = $row[max_item_id];
+	$id = $row;
 	echo "esto es: " . $id;
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";

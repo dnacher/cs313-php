@@ -3,7 +3,6 @@
 function get_db() {
 	$db = NULL;
 	try {
-			alert("test");
 			$dbUser = 'xrobtfjaujboos';
 			$dbPassword = '92dbd43bccca8eb7c543e1664382c228f6627ded37010f312ffe0e057c572842';
 			$dbName = 'd68l84sh86peu';
@@ -17,10 +16,6 @@ function get_db() {
 			die();
 		}
 	return $db;
-}
-
-function getTest(){
-	return "hola";
 }
 
 ?>

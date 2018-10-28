@@ -16,16 +16,7 @@
 <body>
   
 <form action="addItem.php" method="post">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit" value="Add Item">
-</form>
 
-</body>
-</html>
-
-<!--    <form action="/library/addItem.php" method="POST">
-     
       <div class="form-group">
         <label for="txtName">Name</label>
         <input type="text" class="form-control" id="txtName" placeholder="Name of the item">
@@ -38,7 +29,7 @@ E-mail: <input type="text" name="email"><br>
         <label for="cmbItemType">Item Type</label>
         <select multiple class="form-control" id="cmbItemType">
           <?php
-    /*        $statement = $db->prepare("SELECT item_type_id, name FROM item_type WHERE active=true");
+            $statement = $db->prepare("SELECT item_type_id, name FROM item_type WHERE active=true");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
               echo '<option  value=' .$row[item_type_id] . '>' . $row['name'] . '</option>';
@@ -60,6 +51,8 @@ E-mail: <input type="text" name="email"><br>
           ?>
         </select>
       </div>
-      <input type="submit" value="Add Item" />
-    </form>
-*/
+      <input type="submit" value="Add Item">
+</form>
+
+</body>
+</html>

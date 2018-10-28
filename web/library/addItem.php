@@ -9,9 +9,10 @@ $db = get_db();
 try{
 	$statement = $db->prepare("select max (item_id) as max from item");
 	$statement->execute();
-	$row = mysql_fetch_array($statement);
-	$id = $row['max'];
-	echo "esto es: " . $id;
+	while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+    	$id = $row['max'];
+		echo "esto es: " . $id;     
+    }	
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();

@@ -28,7 +28,7 @@
       </div>
       <div class="form-group">
         <label for="txtDescription">Description</label>
-        <textarea class="form-control" id="txtDescription" rows="3"></textarea>
+        <textarea class="form-control" id="txtDescription" placeholder="Description of the item" rows="3"></textarea>
       </div>
       <div class="form-group">
         <label for="cmbItemType">Item Type</label>

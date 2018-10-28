@@ -1,5 +1,6 @@
 <?php
-
+require("dbconnect.php");
+$db = get_db();
 
 $txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
@@ -7,14 +8,11 @@ $cmbItemType = $_POST['cmbItemType'];
 $author = $_POST['cmbAuthor'];
 $id = 1;
 $active = true;
-require("dbconnect.php");
-$db = get_db();
+
 
 try{
 	echo $txtName;
-	echo $txtDescription;
-	echo $cmbItemType;
-	echo $cmbAuthor;
+	/*
 	$statement = $db->prepare("select max (item_id) as max from item");
 	$statement->execute();
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC)){

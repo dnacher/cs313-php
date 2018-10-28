@@ -11,7 +11,7 @@
 
   <!-- BEGIN bootstrap -->     
     <link rel="stylesheet" href="/library/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/library/css/bootstrap.min.js">
+    <link rel="stylesheet" href="/library/js/bootstrap.min.js">
     <!-- END   bootstrap -->
     <script src="/library/js/js.js"></script>
 </head>

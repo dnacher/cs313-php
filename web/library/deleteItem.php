@@ -15,6 +15,6 @@ try{
 	echo "Error with DB. Details: $ex";
 	die();
 }
-header("Location: main.php");
+//header("Location: main.php");
 die(); 
 ?>

@@ -7,9 +7,9 @@ require("dbconnect.php");
 $db = get_db();
 
 try{
-	$statement = $db->prepare("select item_id from item ORDER BY item_id DESC");
+	$statement = $db->prepare("select max (item_id) as max from item");
 	$statement->execute();
-	$id = $row['item_id'];
+	$id = $row['max'];
 	echo "esto es: " . $id;
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";

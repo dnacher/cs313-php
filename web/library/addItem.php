@@ -17,14 +17,7 @@ try{
     	$id = $row['max'];
     }
     $id = $id +1;
-echo $txtName;
-echo $txtDescription;
-echo $cmbItemType;
-echo $author;
-echo $id;
-echo $active;
-
-  /*  $query = 'INSERT INTO item(item_id,item_type_id, name, description, author_id,active) 
+    $query = 'INSERT INTO item(item_id,item_type_id, name, description, author_id,active) 
     		  VALUES(:id, :cmbItemType, :txtName, :txtDescription, :cmbAuthor,:active)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':id', $id);
@@ -35,11 +28,10 @@ echo $active;
 	$statement->bindValue(':active', $active);
 	
 	$statement->execute();
-*/
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();
 }
-//header("Location: main.php");
+header("Location: main.php");
 die(); 
 ?>

@@ -27,7 +27,7 @@
       </div>
       <div class="form-group">
         <label for="cmbItemType">Item Type</label>
-        <select multiple class="form-control" id="cmbItemType">
+        <select class="form-control" id="cmbItemType">
           <?php
             $statement = $db->prepare("SELECT item_type_id, name FROM item_type WHERE active=true");
             $statement->execute();
@@ -40,7 +40,7 @@
       </div>
       <div class="form-group">
         <label for="cmbAuthor">Author</label>
-        <select multiple class="form-control" id="cmbAuthor">
+        <select class="form-control" id="cmbAuthor">
           <?php
             $statement = $db->prepare("SELECT author_id, name FROM author");
             $statement->execute();

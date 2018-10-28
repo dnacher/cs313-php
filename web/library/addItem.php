@@ -32,7 +32,6 @@ try{
 	echo "Error with DB. Details: $ex";
 	die();
 }
-die(); 
 header("Location: main.php");
-
+die(); 
 ?>

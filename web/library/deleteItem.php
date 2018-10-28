@@ -9,7 +9,7 @@ try{
 	$statement = $db->prepare($query);
 	$statement->bindValue(':id', $id);
 	
-	$statement->execute();*/
+	$statement->execute();
 }catch (Exception $ex){
 	echo "Error with DB. Details: $ex";
 	die();

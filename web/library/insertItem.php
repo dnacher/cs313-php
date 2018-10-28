@@ -37,7 +37,7 @@
             $statement = $db->prepare("SELECT item_type_id, name, Description FROM item_type WHERE active=true");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-              echo '<option>' . $row['name'] . '</option>';
+              echo '<option  value=' .$row[item_type_id] . '>' . $row['name'] . '</option>';
             }
 
           ?>

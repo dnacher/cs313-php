@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/library/js/bootstrap.min.js">
     <!-- END   bootstrap -->
     <script src="/library/js/js.js"></script>
-    
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 echo 'aqui';
 
 
-//$statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
+$statement = $db->prepare("SELECT item_id, item_type_id,name, description FROM item");
 //$statement->execute();
 //echo '<div class="list-group">';
 /*while ($row = $statement->fetch(PDO::FETCH_ASSOC))

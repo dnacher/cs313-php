@@ -15,6 +15,7 @@ try{
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
     	$id = $row['max'];
     }
+    $id = $id +1;
     $query = 'INSERT INTO item(item_id,item_type_id, name, description, author_id,active) 
     		  VALUES(:id, :cmbItemType, :txtName, :txtDescription, :cmbAuthor,:active)';
 	$statement = $db->prepare($query);

@@ -24,15 +24,15 @@
 
       <div class="form-group">
         <label for="txtName">Name</label>
-        <input type="text" class="form-control" id="txtName" placeholder="Name of the item">
+        <input type="text" class="form-control" name="txtName" placeholder="Name of the item">
       </div>
       <div class="form-group">
         <label for="txtDescription">Description</label>
-        <textarea class="form-control" id="txtDescription" placeholder="Description of the item" rows="3"></textarea>
+        <textarea class="form-control" id="txtDescription" name="txtDescription" placeholder="Description of the item" rows="3"></textarea>
       </div>
       <div class="form-group">
         <label for="cmbItemType">Item Type</label>
-        <select class="form-control" id="cmbItemType">
+        <select class="form-control" id="cmbItemType" name="cmbItemType">
           <?php
             $statement = $db->prepare("SELECT item_type_id, name FROM item_type WHERE active=true");
             $statement->execute();
@@ -45,14 +45,13 @@
       </div>
       <div class="form-group">
         <label for="cmbAuthor">Author</label>
-        <select class="form-control" id="cmbAuthor">
+        <select class="form-control" id="cmbAuthor" name="cmbAuthor">
           <?php
             $statement = $db->prepare("SELECT author_id, name FROM author");
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
               echo '<option  value=' .$row[author_id] . '>' . $row['name'] . '</option>';
             }
-
           ?>
         </select>
       </div>

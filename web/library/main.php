@@ -24,7 +24,7 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT i.item_id, it.name,i.name, au.name, 
+        $statement = $db->prepare("SELECT i.item_id, it.name,i.name, au.name
                                    FROM item i
                                    JOIN author au on au.author_id=i.author_id
                                    JOIN item_type it on i.item_type_id=it.item_type_id");

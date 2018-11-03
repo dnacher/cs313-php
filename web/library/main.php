@@ -7,7 +7,7 @@
 <html>
 <head>
   <title>Main Page</title>
-  <link rel="stylesheet" href="/library/css/style.css">
+    <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
     <link rel="stylesheet" href="/library/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
                                    JOIN author au on au.author_id=i.author_id
                                    JOIN item_type it on i.item_type_id=it.item_type_id");
         $statement->execute();
-        echo '<div class="list-group width50">';
+        echo '<div class="list-group pecial-form">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';

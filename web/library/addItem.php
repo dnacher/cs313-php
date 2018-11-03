@@ -7,24 +7,18 @@ $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
 $cmbAuthor = $_POST['cmbAuthor'];
 
-echo 'nombre' . $txtName . '<br>';
-echo 'descr' . $txtDescription . '<br>';
-echo 'cmbitemtype' . $cmbItemType . '<br>';
-echo 'cmbauthor' . $cmbAuthor . '<br>';
 try{
 	
 	$query = "INSERT INTO item (name, description, author_id, item_type_id, active)
 	 VALUES ('$txtName', '$txtDescription', '$cmbItemType', '$cmbAuthor', true)";
 
-	echo $query;
-
-	//$statement = $db->prepare($query);
-	//$statement->execute();
+	$statement = $db->prepare($query);
+	$statement->execute();
 
 }catch (Exception $ex){
-/*	echo "Error with DB. Details: $ex";
-	die();*/
+	echo "Error with DB. Details: $ex";
+	die();
 }
-/*header("Location: main.php");
-die();*/
+header("Location: main.php");
+die();
 ?>

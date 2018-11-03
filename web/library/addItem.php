@@ -13,15 +13,10 @@ echo 'cmbitemtype' . $cmbItemType . '<br>';
 echo 'cmbauthor' . $cmbAuthor . '<br>';
 try{
 	
-	$query = 'INSERT INTO item (name, description, author_id, item_id, active)
-	 VALUES (:txtname, :txtDesciption, :cmbitemtype, :cmbauthor, true)';
+	$query = "INSERT INTO item (name, description, author_id, item_id, active)
+	 VALUES ('$txtName', '$txtDesciption', '$cmbitemtype', '$cmbauthor', true)";
 
 	$statement = $db->prepare($query);
-	$statement->bindValue(':txtname', $txtName);
-	$statement->bindValue(':txtDesciption', $txtDesciption);
-	$statement->bindValue(':cmbitemtype', $cmbitemtype);
-	$statement->bindValue(':cmbauthor', $cmbauthor);
-	
 	$statement->execute();
 
 }catch (Exception $ex){

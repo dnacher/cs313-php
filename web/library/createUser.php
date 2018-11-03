@@ -2,24 +2,40 @@
   require("dbconnect.php");
   $db = get_db();
 
-  $user = $pass = "";
-  $userError = $passError = "";
   $good = TRUE;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    $user = $_POST["txtName"];
+    $user = $pass = $userType;
+    $userError = $passError;
+    
     $pass = $_POST["txtPassword"];
     $userType = $_POST["cmbUserType"];
 
-    echo $user;
-    echo $pass;
-    echo $userType;
-
-    if($_POST["txtPassword"] != $_POST["txtPassword2"]){
-      echo 'no matchea';
+    if(empty ($_POST["txtName"]){
+      $userError = "User name cannot be Empty";
+      $good = FALSE;
     }else{
-      echo 'matchea';
+      $user = $_POST["txtName"];
     }
+
+    if(empty ($_POST["txtPassword"]){
+      $userError = "Password cannot be Empty";
+      $good = FALSE;
+    }else{
+      $pass = $_POST["txtPassword"];
+    }
+  
+    if($_POST["txtPassword"] != $_POST["txtPassword2"]){
+      $passError = "Password doesn't match"
+      $good = FALSE;
+    }
+
+    if($good){
+      echo 'everythign is good';
+    }else{
+      echo 'there is something wrong';
+    }
+
   }
 
     /*  error_log("doing POST");
@@ -100,11 +116,11 @@
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
           <div class="form-group">
-            <label>Name</label>
+            <label>Name</label> <?php echo $userError ?>
             <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name of the item">
           </div>
           <div class="form-group">
-            <label for="txtPassword">Password</label>
+            <label for="txtPassword">Password</label> <?php echo $passError ?>
             <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password">
             <label for="txtPassword2">Password</label>
             <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Repeat Password">

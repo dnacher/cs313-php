@@ -7,10 +7,10 @@ $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
 $cmbAuthor = $_POST['cmbAuthor'];
 
-echo $txtName;
-echo $txtDescription;
-echo $cmbItemType;
-echo $cmbAuthor;
+echo 'nombre' . $txtName . '<br>';
+echo 'descr' . $txtDescription . '<br>';
+echo 'cmbitemtype' . $cmbItemType . '<br>';
+echo 'cmbauthor' . $cmbAuthor . '<br>';
 /*try{
 	
 	$query = 'DE item WHERE id_item=:id';

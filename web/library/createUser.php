@@ -29,13 +29,6 @@
       $passError = "Password doesn't match";
       $good = FALSE;
     }
-
-    if($good){
-      echo 'everythign is good';
-    }else{
-      echo 'there is something wrong';
-    }
-
   }
 
 ?>
@@ -81,6 +74,15 @@
           </div>
           <input type="submit" class="btn btn-primary" value="Add Item">
           
+          <?php 
+            
+            if($good){
+                echo '<div class="alert alert-success" role="alert">everythign is good.</div>';
+            }else{
+                echo '<div class="alert alert-danger" role="alert">there was something wrong.</div>';
+            }
+
+          ?>
     </form>
   </body>
 </html>

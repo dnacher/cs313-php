@@ -33,9 +33,9 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';
+          echo        '<small>' . $row['item_id'] . '</small>';
           echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
-          echo '</a>';
-          echo        '<small class="list-group-item list-group-item-action flex-column align-items-start active">' . $row['item_id'] . '</small>';
+          echo '</a>';          
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';          

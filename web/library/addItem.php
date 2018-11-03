@@ -2,7 +2,7 @@
 require("dbconnect.php");
 $db = get_db();
 
-$txtname = $_POST['txtName'];
+$txtName = $_POST['txtName'];
 $txtDescription = $_POST['txtDescription'];
 $cmbItemType = $_POST['cmbItemType'];
 $cmbAuthor = $_POST['cmbAuthor'];

@@ -16,13 +16,15 @@ try{
 	$query = "INSERT INTO item (name, description, author_id, item_id, active)
 	 VALUES ('$txtName', '$txtDesciption', '$cmbitemtype', '$cmbauthor', true)";
 
-	$statement = $db->prepare($query);
-	$statement->execute();
+	echo $query;
+
+	//$statement = $db->prepare($query);
+	//$statement->execute();
 
 }catch (Exception $ex){
-	echo "Error with DB. Details: $ex";
-	die();
+/*	echo "Error with DB. Details: $ex";
+	die();*/
 }
-header("Location: main.php");
-die();
+/*header("Location: main.php");
+die();*/
 ?>

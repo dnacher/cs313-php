@@ -3,8 +3,9 @@
   $db = get_db();
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
-    session_start();
-    if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
+   echo 'entre';
+   // session_start();
+    /*if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
       $txtUser = $_POST['txtUser'];
       $txtPass = $_POST['txtPass'];
       $txtPass = hash('ripemd160', $pass);
@@ -21,7 +22,7 @@
     }else{
       header("Location: index.php");
       die();
-    }
+    }*/
   }else{
     header("Location: index.php");
     die();

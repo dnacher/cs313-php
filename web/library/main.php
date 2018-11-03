@@ -29,7 +29,7 @@
                                    JOIN author au on au.author_id=i.author_id
                                    JOIN item_type it on i.item_type_id=it.item_type_id");
         $statement->execute();
-        echo '<div class="list-group pecial-form">';
+        echo '<div class="list-group special-form">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';

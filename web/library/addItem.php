@@ -10,7 +10,7 @@ $cmbAuthor = $_POST['cmbAuthor'];
 try{
 	
 	$query = "INSERT INTO item (name, description, author_id, item_type_id, active)
-	 VALUES ('$txtName', '$txtDescription', '$cmbItemType', '$cmbAuthor', true)";
+	 VALUES ('$txtName', '$txtDescription', '$cmbAuthor','$cmbItemType', true)";
 
 	$statement = $db->prepare($query);
 	$statement->execute();

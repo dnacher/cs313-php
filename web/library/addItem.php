@@ -13,7 +13,7 @@ echo 'cmbitemtype' . $cmbItemType . '<br>';
 echo 'cmbauthor' . $cmbAuthor . '<br>';
 try{
 	
-	$query = "INSERT INTO item (name, description, author_id, item_id, active)
+	$query = "INSERT INTO item (name, description, author_id, item_type_id, active)
 	 VALUES ('$txtName', '$txtDescription', '$cmbItemType', '$cmbAuthor', true)";
 
 	echo $query;

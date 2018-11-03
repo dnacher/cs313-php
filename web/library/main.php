@@ -20,7 +20,11 @@
 <body>
   <div>
 
-    <h1>Books Available</h1>
+    <h1>Books Available</h1><br>
+
+    <form action="/library/insertItem.php">
+      <button type="submit" class="btn btn-primary">Add Item</button><br><br>        
+    </form>
 
     <?php
 
@@ -47,8 +51,6 @@
         echo '</div>';
     ?>
 
-    <form action="/library/insertItem.php">
-      <button type="submit" class="btn btn-primary">Add Item</button><br><br>        
-    </form>
+    
 
   </div>

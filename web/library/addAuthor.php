@@ -2,7 +2,7 @@
 require("dbconnect.php");
 $db = get_db();
 
-$txtName = $_POST['txtName'];
+$txtName = $_POST['txtAuthorName'];
 $txtDescription = $_POST['txtDescription'];
 
 try{

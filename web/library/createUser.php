@@ -7,33 +7,36 @@
   $good = TRUE;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
+    echo 'here';
       error_log("doing POST");
       
       if (empty($_POST["txtName"])) {
           $userErr = "User is required";
           $good = FALSE;
       } else {
-          $user = fix_input($_POST["user"]);        
+          $user = fix_input($_POST["txtName"]);        
       }
       if (empty($_POST["txtPassword"])) {
           $passErr = "Pass is required";
           $good = FALSE;
       } else {
-          $pass = fix_input($_POST["pass"]);        
+          if (empty($_POST["txtPassword2"])) {
+            $passErr = "Pass2 is required";
+            $good = FALSE;
+          } else{
+            if($_POST["txtPassword"] =! $_POST["txtPassword2"]){
+              $passErr = "Your password must match";
+              $good = FALSE;
+            }
+          $pass = fix_input($_POST["txtPassword"]);        
       }
-      if (empty($_POST["txtPassword2"])) {
-          $passErr = "Pass2 is required";
-          $good = FALSE;
-      } else{
-        if($_POST["txtPassword"] =! $_POST["txtPassword2"]){
-          $passErr = "Your password must match";
-          $good = FALSE;
-        }
-      }
-      $userType = $_POST[""];
-
       
+      $userType = $_POST["cmbUserType"];
+
+      echo 'here2';
+
       if ( $good ) {
+        echo 'here3';
           error_log("logging user in.");
           $hash = password_hash($password, PASSWORD_DEFAULT);
           $query = "insert into users (name, pass) values (:name, :pass)";
@@ -53,6 +56,8 @@
               error_log("Error logging in: " . $ex->getMessage());
               $good = FALSE;
           }
+      }else{
+        echo $loginError;
       } 
   }
   function fix_input($data) {
@@ -81,7 +86,6 @@
     <h2>Item Type</h2>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-
           <div class="form-group">
             <label>Name</label>
             <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name of the item">
@@ -92,10 +96,9 @@
             <label for="txtPassword2">Password</label>
             <input type="password" class="form-control" id="txtPassword2" placeholder="Repeat Password">
           </div>
-          <input type="submit" value="Add Item">
           <div class="form-group">
-            <label for="cmbAuthor">Author</label>
-            <select class="form-control" id="cmbAuthor" name="cmbAuthor">
+            <label for="cmbUserType">Author</label>
+            <select class="form-control" id="cmbUserType" name="cmbUserType">
               <?php
                 $statement = $db->prepare("SELECT user_type_id, name FROM user_type");
                 $statement->execute();
@@ -105,6 +108,8 @@
               ?>
             </select>
           </div>
+          <input type="submit" class="btn btn-primary" value="Add Item">
+          
     </form>
   </body>
 </html>

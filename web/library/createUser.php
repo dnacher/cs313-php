@@ -5,7 +5,7 @@
   $good = TRUE;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    $user = $pass = $userType;
+    $user = $pass = $pass2 = $userType;
     $userError = $passError;
     
     $pass = $_POST["txtPassword"];
@@ -78,6 +78,9 @@
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
               if($good){
+                  $pass2 = $pass;
+                  echo "pass1 " . $pass;
+                  echo "pass2 " . $pass;
                   $pass = hash('ripemd160', $pass);
                   echo "pass1 " . $pass;
                   $pass = hash('ripemd160', $pass2);

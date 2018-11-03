@@ -29,9 +29,9 @@
                                    JOIN author au on au.author_id=i.author_id
                                    JOIN item_type it on i.item_type_id=it.item_type_id");
         $statement->execute();
-        echo '<div class="list-group">';
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-          echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active width50">';
+        echo '<div class="list-group width50">';
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
+          echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';
           echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
           echo '</a>';
@@ -41,7 +41,7 @@
           echo  '<small>' . $row['item_type_name']. '</small>';          
           echo '<form action="deleteItem.php" method=POST>
                 <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
-                  <button type="submit" class="btn btn-danger width50">Delete</button><br><br>        
+                  <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';
         }
         echo '</div>';

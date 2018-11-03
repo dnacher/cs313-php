@@ -26,7 +26,7 @@
     }
   
     if($_POST["txtPassword"] != $_POST["txtPassword2"]){
-      $passError = "Password doesn't match"
+      $passError = "Password doesn't match";
       $good = FALSE;
     }
 

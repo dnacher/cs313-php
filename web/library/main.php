@@ -22,7 +22,7 @@
 
     <h1>Books Available</h1><br>
 
-    <form action="/library/insertItem.php">
+    <form action="/library/insertItem.php" style="width: 50%">
       <button type="submit" class="btn btn-primary">Add Item</button><br><br>        
     </form>
 

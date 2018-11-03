@@ -76,7 +76,7 @@
           
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-            echo '<br>' 
+              echo '<br>';
               if($good){
                   echo '<div class="alert alert-success" role="alert">everythign is good.</div>';
               }else{

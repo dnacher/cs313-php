@@ -34,7 +34,7 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw"> <a href="createUser.php">create user</a></span>
     </div>
   </form>
 </div>

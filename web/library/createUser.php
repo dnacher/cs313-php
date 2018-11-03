@@ -75,12 +75,11 @@
           <input type="submit" class="btn btn-primary" value="Add Item">
           
           <?php 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-              echo '<br>';
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {              
               if($good){
-                  echo '<div class="alert alert-success" role="alert">everythign is good.</div>';
+                  echo '<br><div class="alert alert-success" role="alert">everythign is good.</div>';
               }else{
-                  echo '<div class="alert alert-danger" role="alert">there was something wrong.</div>';
+                  echo '<br><div class="alert alert-danger" role="alert">there was something wrong.</div>';
               }
             }
           ?>

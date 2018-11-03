@@ -15,6 +15,7 @@
     echo $user;
     echo $pass;
     echo $userType;
+  }
 
     /*  error_log("doing POST");
       
@@ -67,8 +68,6 @@
       }else{
         echo $loginError;
       }*/ 
-  }
-}
   function fix_input($data) {
     $data = trim($data);
     $data = stripslashes($data);

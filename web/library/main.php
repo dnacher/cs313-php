@@ -32,7 +32,7 @@
         echo '<div class="list-group">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active width50">';
-          echo '<div class="d-flex w-100 justify-content-between">';
+          echo '<div class="d-flex justify-content-between">';
           echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
           echo '</a>';
           echo        '<small>' . $row['item_id'] . '</small>';

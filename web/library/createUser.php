@@ -100,9 +100,9 @@
           </div>
           <div class="form-group">
             <label for="txtPassword">Password</label>
-            <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+            <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password">
             <label for="txtPassword2">Password</label>
-            <input type="password" class="form-control" id="txtPassword2" placeholder="Repeat Password">
+            <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Repeat Password">
           </div>
           <div class="form-group">
             <label for="cmbUserType">Author</label>

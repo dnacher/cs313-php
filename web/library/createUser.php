@@ -8,7 +8,15 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
     echo 'here';
-      error_log("doing POST");
+    $user = $_POST["txtName"];
+    $pass = $_POST["txtPassword"];
+    $userType = $_POST["cmbUserType"];
+
+    echo $user;
+    echo $pass;
+    echo $userType;
+
+    /*  error_log("doing POST");
       
       if (empty($_POST["txtName"])) {
           $userErr = "User is required";
@@ -58,7 +66,7 @@
           }
       }else{
         echo $loginError;
-      } 
+      }*/ 
   }
 }
   function fix_input($data) {

@@ -7,7 +7,7 @@
 <html>
 
 <head>
-  <title>Main Page</title>
+  <title>Insert Item</title>
   <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  <h2>Item</h2>
   
 <form action="addItem.php" method="POST">
 

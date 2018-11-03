@@ -7,7 +7,7 @@
 <html>
 
 <head>
-  <title>Main Page</title>
+  <title>Insert Author</title>
   <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
@@ -19,6 +19,8 @@
 </head>
 
 <body>
+
+  <h2>Author</h2>
   
 <form action="addAuthor.php" method="POST">
 

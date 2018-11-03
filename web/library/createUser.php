@@ -116,11 +116,11 @@
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
           <div class="form-group">
-            <label>Name</label> <?php echo $userError ?>
+            <label>Name</label> <?php echo '<div class="alert alert-danger" role="alert">' . $userError . '</div>' ?>
             <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name of the item">
           </div>
           <div class="form-group">
-            <label for="txtPassword">Password</label> <?php echo $passError ?>
+            <label for="txtPassword">Password</label> '<div class="alert alert-danger" role="alert">' . $passError . '</div>' ?>
             <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password">
             <label for="txtPassword2">Password</label>
             <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Repeat Password">

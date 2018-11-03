@@ -19,7 +19,7 @@
     }
 
     if(empty ($_POST["txtPassword"])){
-      $userError = "Password cannot be Empty";
+      $passError = "Password cannot be Empty";
       $good = FALSE;
     }else{
       $pass = $_POST["txtPassword"];
@@ -36,64 +36,6 @@
       echo 'there is something wrong';
     }
 
-  }
-
-    /*  error_log("doing POST");
-      
-      if (empty($_POST["txtName"])) {
-          $userErr = "User is required";
-          $good = FALSE;
-      } else {
-          $user = fix_input($_POST["txtName"]);        
-      }
-      if (empty($_POST["txtPassword"])) {
-          $passErr = "Pass is required";
-          $good = FALSE;
-      } else {
-          if (empty($_POST["txtPassword2"])) {
-            $passErr = "Pass2 is required";
-            $good = FALSE;
-          } else{
-            if($_POST["txtPassword"] =! $_POST["txtPassword2"]){
-              $passErr = "Your password must match";
-              $good = FALSE;
-            }
-          $pass = fix_input($_POST["txtPassword"]);        
-      }
-      
-      $userType = $_POST["cmbUserType"];
-
-      echo 'here2';
-
-      if ( $good ) {
-        echo 'here3';
-          error_log("logging user in.");
-          $hash = password_hash($password, PASSWORD_DEFAULT);
-          $query = "insert into users (name, pass) values (:name, :pass)";
-          try {
-              error_log("starting add");
-              $stmt = $db->prepare($query);
-              if ($stmt->execute(array($user,$hash))) {
-                  error_log("Add success!");
-                  header('Location: ./week7TeamLogin.php');
-                  die();
-              } else { 
-                  error_log("add fail!");
-                  $loginErr = "There was a problem logging in.  Check you user and pass and try again...";
-              }
-          } catch (PDOException $ex) {
-              $loginError = "Error logging in.";
-              error_log("Error logging in: " . $ex->getMessage());
-              $good = FALSE;
-          }
-      }else{
-        echo $loginError;
-      }*/ 
-  function fix_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
   }
 
 ?>

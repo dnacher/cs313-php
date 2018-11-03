@@ -31,7 +31,8 @@
         $statement->execute();
         echo '<div class="list-group" style="width: 50%">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
-          echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
+          echo '<div class="list-group-item list-group-item-action flex-column align-items-start active">'
+          echo '<a href="#">';
           echo '<div class="d-flex justify-content-between">';
           echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
           echo '</a>';
@@ -39,6 +40,7 @@
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';          
+          echo '</div>'
           echo '<form action="deleteItem.php" method=POST>
                 <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        

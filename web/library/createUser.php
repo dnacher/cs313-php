@@ -75,7 +75,8 @@
           <input type="submit" class="btn btn-primary" value="Add Item">
           
           <?php 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {  
+            if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+            echo '<br>' 
               if($good){
                   echo '<div class="alert alert-success" role="alert">everythign is good.</div>';
               }else{

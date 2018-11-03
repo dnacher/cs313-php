@@ -5,10 +5,10 @@
   $good = TRUE;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    $user = $pass = $pass2 = $userType;
+    $user = $pass = $userType = $description;
     $userError = $passError;
     
-    $pass = $_POST["txtPassword"];
+    $description = $_POST["txtDescription"];
     $userType = $_POST["cmbUserType"];
 
     if(empty ($_POST["txtName"])){
@@ -55,6 +55,10 @@
             <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name of the item">
           </div>
           <div class="form-group">
+            <label for="txtDescription">Description</label>
+            <textarea class="form-control" id="txtDescription" name="txtDescription" placeholder="Description of the item" rows="3"></textarea>
+          </div>
+          <div class="form-group">
             <label for="txtPassword">Password</label> <?php if(!empty ($passError)){ echo '<div class="alert alert-danger" role="alert">' . $passError . '</div>';} ?>
             <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password">
             <label for="txtPassword2">Password</label>
@@ -77,14 +81,17 @@
           
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
-              if($good){
-                  $pass2 = $pass;
-                  echo "pass1 " . $pass;
-                  echo "pass2 " . $pass;
+              if($good){                  
                   $pass = hash('ripemd160', $pass);
-                  echo "pass1 " . $pass;
-                  $pass = hash('ripemd160', $pass2);
-                  echo "pass2 " . $pass;
+                  try{  
+                    $query = "INSERT INTO users (name, description, active, password,user_type_id)
+                    VALUES ('$user', '$txtDescription', true, '$pass','$userType')";
+                    $statement = $db->prepare($query);
+                    $statement->execute();
+                  }catch (Exception $ex){
+                    echo "Error with DB. Details: $ex";
+                    die();
+                  }
                   echo '<div class="alert alert-success" role="alert">User created.</div>';
               }else{
                   echo '<div class="alert alert-danger" role="alert">there was something wrong.</div>';

@@ -85,6 +85,10 @@ span.psw {
     font-weight: bold;
 }
 
+.width50{
+    width: 50%;
+}
+
 .close:hover,
 .close:focus {
     color: red;

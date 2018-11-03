@@ -78,7 +78,9 @@
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
               if($good){
-                  echo '<div class="alert alert-success" role="alert">everythign is good.</div>';
+                  $pass = hash('ripemd160', $pass);
+                  echo $pass;
+                  echo '<div class="alert alert-success" role="alert">User created.</div>';
               }else{
                   echo '<div class="alert alert-danger" role="alert">there was something wrong.</div>';
               }

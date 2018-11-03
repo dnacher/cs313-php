@@ -8,7 +8,7 @@ $txtDescription = $_POST['txtDescription'];
 try{
 	
 	$query = "INSERT INTO item_type (name, description, active)
-	 VALUES ('$txtName', '$txtDescription', '$cmbItemType', '$cmbAuthor', true)";
+	 VALUES ('$txtName', '$txtDescription', true)";
 
 	$statement = $db->prepare($query);
 	$statement->execute();

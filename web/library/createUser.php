@@ -11,14 +11,14 @@
     $pass = $_POST["txtPassword"];
     $userType = $_POST["cmbUserType"];
 
-    if(empty ($_POST["txtName"]){
+    if(empty ($_POST["txtName"])){
       $userError = "User name cannot be Empty";
       $good = FALSE;
     }else{
       $user = $_POST["txtName"];
     }
 
-    if(empty ($_POST["txtPassword"]){
+    if(empty ($_POST["txtPassword"])){
       $userError = "Password cannot be Empty";
       $good = FALSE;
     }else{

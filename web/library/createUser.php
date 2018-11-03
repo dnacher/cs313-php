@@ -7,7 +7,6 @@
   $good = TRUE;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    echo 'here';
     $user = $_POST["txtName"];
     $pass = $_POST["txtPassword"];
     $userType = $_POST["cmbUserType"];
@@ -15,6 +14,12 @@
     echo $user;
     echo $pass;
     echo $userType;
+
+    if($_POST["txtPassword"] != $_POST["txtPassword2"]){
+      echo 'no matchea';
+    }else{
+      echo 'matchea';
+    }
   }
 
     /*  error_log("doing POST");

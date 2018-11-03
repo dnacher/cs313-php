@@ -25,6 +25,12 @@
     <form action="/library/insertItem.php" style="width: 50%">
       <button type="submit" class="btn btn-primary">Add Item</button><br><br>        
     </form>
+    <form action="/library/insertAuthor.php" style="width: 50%">
+      <button type="submit" class="btn btn-primary">Add Author</button><br><br>        
+    </form>
+    <form action="/library/insertItemType.php" style="width: 50%">
+      <button type="submit" class="btn btn-primary">Add Item Type</button><br><br>        
+    </form>
 
     <?php
 

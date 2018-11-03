@@ -2,11 +2,18 @@
 require("dbconnect.php");
 $db = get_db();
 
-$id = $_GET['id'];
+$txtname = $_POST['txtName'];
+$txtDescription = $_POST['txtDescription'];
+$cmbItemType = $_POST['cmbItemType'];
+$cmbAuthor = $_POST['cmbAuthor'];
 
-try{
+echo $txtName;
+echo $txtDescription;
+echo $cmbItemType;
+echo $cmbAuthor;
+/*try{
 	
-	$query = 'DELETE item WHERE id_item=:id';
+	$query = 'DE item WHERE id_item=:id';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':id', $id);
 	
@@ -16,5 +23,5 @@ try{
 	die();
 }
 header("Location: main.php");
-die(); 
+die();*/ 
 ?>

@@ -2,8 +2,7 @@
   require("dbconnect.php");
   $db = get_db();
 
-  if($_SERVER["REQUEST_METHOD"] == "POST"){
-   echo 'entre';
+  //if($_SERVER["REQUEST_METHOD"] == "POST"){
    // session_start();
     /*if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
       $txtUser = $_POST['txtUser'];
@@ -23,10 +22,10 @@
       header("Location: index.php");
       die();
     }*/
-  }else{
+  /*}else{
     header("Location: index.php");
     die();
-  }
+  }*/
 ?>
 <!DOCTYPE html>
 <html>

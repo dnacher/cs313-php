@@ -5,6 +5,28 @@
     <title>Index</title>
     <link rel="stylesheet" href="/library/css/style.css">
     <?php 
+      $errorMessage;
+
+      if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
+          $txtUser = $_POST['txtUser'];
+          $txtPass = $_POST['txtPass'];
+          $txtPass = hash('ripemd160', $pass);
+          $$query = "SELECT count(*)
+                     FROM users
+                     WHERE name=:user
+                     AND password=:pass");
+          $statement = $db->prepare($query);
+          $statement->bindValue(':user', $txtUser);
+          $statement->bindValue(':pass', $txtPass);
+          $statement->execute();
+          $data=mysql_fetch_assoc($statement);
+          $errorMessage = $data;
+    }else{
+      header("Location: index.php");
+      die();
+    }
+      }
       session_start();
     ?> 
 </head>
@@ -12,7 +34,11 @@
 
 <h2>Login</h2>
 
-<button onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button>
+<button onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button><br><br>
+
+  <?php
+    echo '<div class="alert alert-danger" role="alert">' . $errorMessage . '</div>';
+  ?>
 
 <div id="loginForm" class="modal">
   

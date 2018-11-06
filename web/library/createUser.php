@@ -82,7 +82,8 @@
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
               if($good){                  
-                  $pass = hash('ripemd160', $pass);
+                  //$pass = hash('ripemd160', $pass);
+                  $pass = password_hash($pass);
                   try{  
                     $query = "INSERT INTO users (name, description, active, password,user_type_id)
                     VALUES ('$user', '$txtDescription', true, '$pass','$userType')";

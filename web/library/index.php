@@ -25,7 +25,7 @@
           while($row = pg_fetch_array($statement)){
             $errorMessage = $row["total"];  
           }
-          
+          echo $errorMessage;
     }else{
       header("Location: index.php");
       die();

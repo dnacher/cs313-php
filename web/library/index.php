@@ -12,10 +12,10 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
-          $query = "SELECT count(*)
+          $query = 'SELECT count(*)
                      FROM users
                      WHERE name=:user
-                     AND password=:pass";
+                     AND password=:pass';
           $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);

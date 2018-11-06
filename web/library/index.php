@@ -14,8 +14,8 @@
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
-          $txtPass = hash('ripemd160', $pass);
-          $query = 'SELECT name as name, user_type_id as userType
+          $txtPass = hash('ripemd160', $txtPass);
+          $query = 'SELECT name, user_type_id as userType
                      FROM users
                      WHERE name=:user
                      AND password=:pass';

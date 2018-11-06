@@ -52,7 +52,7 @@
   <?php
     if($good){
       echo "<form action='/library/main.php' style='width: 50%'>";
-      echo "<button type='submit' class='btn alert-success'>Main</button><br><br>";
+      echo "<button type='submit' class='btn alert-success' style='width:auto;'>Main</button><br><br>";
       echo "</form>";
     }
     echo "<div class='alert alert-danger' role='alert'>" . $errorMessage . "</div>";

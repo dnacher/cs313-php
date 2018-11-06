@@ -7,16 +7,16 @@
     <?php 
       require("dbconnect.php");
       $db = get_db();
+      $hash = '9c1185a5c5e9fc54612808977ee8f548b2258d31';
       $errorMessage;
       $good= false;
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
-          $txtPass = $_POST['txtPass'];
-          $txtPass = hash('ripemd160', $txtPass);
-
-          $query = 'SELECT name, user_type_id as userType
+          $txtPass = $_POST['txtPass'];         
+          $pass;
+          $query = 'SELECT name, user_type_id as userType, password as pass
                      FROM users
                      WHERE name=:user
                      AND password=:pass';
@@ -25,11 +25,11 @@
           $statement->bindValue(':pass', $txtPass);
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $userType = row["userType"];  
-            $good = true;
+            $userType = row["userType"];            
             $errorMessage = "correct";
+            $pass = row["pass"];
           }
-          if($good){
+          if(password_verify($pass,$hash)){
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

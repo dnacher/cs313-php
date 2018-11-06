@@ -51,10 +51,9 @@
 
   <?php
     if($good){
-      <form action="/library/main.php" style="width: 50%">
-        <button type="submit" class="btn alert-success">Main</button><br><br>        
-      </form>
-      echo ''
+      echo '<form action="/library/main.php" style="width: 50%">';
+        echo'<button type="submit" class="btn alert-success">Main</button><br><br>';
+      echo'</form>';
     }
     echo '<div class="alert alert-danger" role="alert">' . $errorMessage . '</div>';
   ?>

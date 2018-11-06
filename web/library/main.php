@@ -2,8 +2,8 @@
   require("dbconnect.php");
   $db = get_db();
   session_start();
-  $txtUser = $_POST['user'];
-  $txtUserType = $_POST['userType'];
+  $txtUser = $_SESSION['user'];
+  $txtUserType = $_SESSION['userType'];
   if(isset($txtUser)){
     echo $txtUser . "<br>";
     echo $txtUserType . "<br>";

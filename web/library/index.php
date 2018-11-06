@@ -12,6 +12,7 @@
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){session_start();
+          echo "entre";
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
@@ -24,20 +25,25 @@
           $statement->bindValue(':pass', $txtPass);
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+            echo "aqui";
             $userType = row["userType"];  
             $good = true;
           }
+          echo $good;
           if($good){
+            echo "entre34";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
             header("Location: main.php");
             die();  
           }else{
+            echo "entre 78";
             $errorMessage = "The user name or password is incorrect";
           }         
-        }else{
+        }else{          
           header("Location: index.php");
+          echo "entre 99";
           die();
         }
       }

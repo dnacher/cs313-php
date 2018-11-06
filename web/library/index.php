@@ -5,6 +5,8 @@
     <title>Index</title>
     <link rel="stylesheet" href="/library/css/style.css">
     <?php 
+      require("dbconnect.php");
+      $db = get_db();
       $errorMessage;
 
       if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -12,10 +14,11 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
-          $statement = $db->prepare('SELECT count(*)
+          $query = 'SELECT count(*)
                      FROM users
                      WHERE name=:user
-                     AND password=:pass');
+                     AND password=:pass';
+          $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
           $statement->execute();

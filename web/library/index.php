@@ -14,7 +14,7 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
-          $query = 'SELECT count(*)
+          $query = 'SELECT count(*) as total
                      FROM users
                      WHERE name=:user
                      AND password=:pass';
@@ -22,8 +22,10 @@
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
           $statement->execute();
-          $data=mysql_fetch_assoc($statement);
-          $errorMessage = $data;
+          while($row = pg_fetch_array($statement)){
+            $errorMessage = $row["total"];  
+          }
+          
     }else{
       header("Location: index.php");
       die();

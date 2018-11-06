@@ -35,7 +35,7 @@
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
-            header("Location: main.php");
+            /*header("Location: main.php");*/
             die();  
           }else{
             echo "entre 78";
@@ -53,7 +53,7 @@
 
 <h2>Login</h2>
 
-<button onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button><br><br>
+<!--<button onclick="document.getElementById('loginForm').style.display='block'" style="width:auto;">Login</button><br><br>-->
 
   <?php
     echo '<div class="alert alert-danger" role="alert">' . $errorMessage . '</div>';
@@ -61,7 +61,8 @@
 
 <div id="loginForm" class="modal">
   
-  <form class="modal-content animate" action="/library/index.php" method="POST">
+  <!--<form class="modal-content animate" action="/library/indes.php" method="POST">-->
+    <form>
     <div class="imgcontainer">
       <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="/library/images/login_icon.png" alt="Avatar" class="avatar" width="150" height="180">
@@ -85,6 +86,7 @@
       <span class="psw"> <a href="createUser.php">create user</a></span>
     </div>
   </form>
+  <!--</form>-->
 </div>
 
 <script>

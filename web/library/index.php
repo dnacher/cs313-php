@@ -8,6 +8,7 @@
       require("dbconnect.php");
       $db = get_db();
       $errorMessage;
+      $good= false;
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){session_start();
@@ -21,18 +22,19 @@
           $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
-
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $errorMessage = $row["name"];
             $userType = row["userType"];  
+            $good = true;
           }
-          if(isset($errorMessage)){
+          if($good){
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
             header("Location: main.php");
             die();  
+          }else{
+            $errorMessage = "The user name or password is incorrect";
           }         
         }else{
           header("Location: index.php");

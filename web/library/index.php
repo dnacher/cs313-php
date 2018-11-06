@@ -7,7 +7,6 @@
     <?php 
       require("dbconnect.php");
       $db = get_db();
-      $hash = '9c1185a5c5e9fc54612808977ee8f548b2258d31';
       $errorMessage;
       $good= false;
       $userType;
@@ -29,6 +28,7 @@
             $errorMessage = "correct";
             $pass = row["pass"];
           }
+          $hash = password_hash($pass, PASSWORD_DEFAULT);
           if(password_verify($pass,$hash)){
             session_start();
             $_SESSION["user"] = $txtUser;

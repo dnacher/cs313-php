@@ -22,7 +22,7 @@
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
           $statement->execute();
-          while($row = pg_fetch_array($statement)){
+          while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $errorMessage = $row["total"];  
           }
           echo $errorMessage;

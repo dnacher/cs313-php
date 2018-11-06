@@ -14,6 +14,8 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
+          echo $txtUser . '<br>';
+          echo $txtPass . '<br>';
           $query = 'SELECT count(*) as total
                      FROM users
                      WHERE name=:user
@@ -21,7 +23,7 @@
           $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
-          echo $statement;
+
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $errorMessage = $row["total"];  

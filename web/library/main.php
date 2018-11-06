@@ -7,7 +7,8 @@
   if(isset($txtUser)){
     echo 'correct';    
   }else{
-    echo 'wrong';
+    header("Location: index.php");
+    die();
   }    
 
   //if($_SERVER["REQUEST_METHOD"] == "POST"){

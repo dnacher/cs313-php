@@ -27,7 +27,7 @@
             $errorMessage = $row["name"];
             $userType = row["userType"];  
           }
-          if(isset($errorMessage){
+          if(isset($errorMessage)){
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

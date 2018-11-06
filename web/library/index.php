@@ -21,6 +21,7 @@
           $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);
           $statement->bindValue(':pass', $txtPass);
+          echo $statement;
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $errorMessage = $row["total"];  

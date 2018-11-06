@@ -51,12 +51,11 @@
 
   <?php
     if($good){
-      echo 'entro';
-      echo '<form action="/library/main.php" style="width: 50%">';
-      echo '<button type="submit" class="btn alert-success">Main</button><br><br>';
-      echo '</form>';
+      echo "<form action='/library/main.php' style='width: 50%'>";
+      echo "<button type='submit' class='btn alert-success'>Main</button><br><br>";
+      echo "</form>";
     }
-    echo '<div class="alert alert-danger" role="alert">' . $errorMessage . '</div>';
+    echo "<div class='alert alert-danger' role='alert'>" . $errorMessage . "</div>";
   ?>
 
 <div id="loginForm" class="modal">

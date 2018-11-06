@@ -35,9 +35,6 @@
           }else{
             $errorMessage = "The user name or password is incorrect";
           }         
-        }else{          
-          header("Location: index.php");
-          die();
         }
       }
     ?> 
@@ -51,9 +48,10 @@
 
   <?php
     if($good){
+      echo 'entro';
       echo '<form action="/library/main.php" style="width: 50%">';
-        echo'<button type="submit" class="btn alert-success">Main</button><br><br>';
-      echo'</form>';
+      echo '<button type="submit" class="btn alert-success">Main</button><br><br>';
+      echo '</form>';
     }
     echo '<div class="alert alert-danger" role="alert">' . $errorMessage . '</div>';
   ?>
@@ -74,9 +72,6 @@
       <input type="password" placeholder="Enter Password" name="txtPass" required>
         
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">

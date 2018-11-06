@@ -1,11 +1,18 @@
 <?php
   require("dbconnect.php");
   $db = get_db();
+  session_start();
+  $txtUser = $_POST['user'];
+  $txtUserType = $_POST['userType'];
+  if(isset($txtUser)){
+    echo 'correct';    
+  }else{
+    echo 'wrong';
+  }    
 
   //if($_SERVER["REQUEST_METHOD"] == "POST"){
    // session_start();
     /*if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
-      $txtUser = $_POST['txtUser'];
       $txtPass = $_POST['txtPass'];
       $txtPass = hash('ripemd160', $pass);
       $$query = "SELECT count(*)

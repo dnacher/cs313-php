@@ -8,15 +8,13 @@
       require("dbconnect.php");
       $db = get_db();
       $errorMessage;
-
+      $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
-          echo $txtUser . '<br>';
-          echo $txtPass . '<br>';
-          $query = 'SELECT count(*) as total
+          $query = 'SELECT count name as name, user_type_id as userType
                      FROM users
                      WHERE name=:user
                      AND password=:pass';
@@ -26,15 +24,21 @@
 
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $errorMessage = $row["total"];  
+            $errorMessage = $row["name"];
+            $userType = row["userType"];  
           }
-          echo $errorMessage;
-    }else{
-      header("Location: index.php");
-      die();
-    }
+          if($errorMessage==1){
+            session_start();
+            $_SESSION["user"] = $txtUser;
+            $_SESSION["userType"] = $userType;
+            header("Location: main.php");
+            die();  
+          }         
+        }else{
+          header("Location: index.php");
+          die();
+        }
       }
-      session_start();
     ?> 
 </head>
 <body>

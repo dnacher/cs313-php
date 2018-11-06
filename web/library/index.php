@@ -11,7 +11,9 @@
       $good= false;
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
+        echo "aca";
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
+          echo "aca2";
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
@@ -28,6 +30,7 @@
             $good = true;
           }
           if($good){
+            echo "aca3";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

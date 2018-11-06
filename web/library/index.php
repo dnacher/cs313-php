@@ -15,6 +15,7 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $txtPass);
+
           $query = 'SELECT name, user_type_id as userType
                      FROM users
                      WHERE name=:user
@@ -33,7 +34,7 @@
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
           }else{
-            $errorMessage = "The user name or password is incorrect";
+            $errorMessage = $txtPass; //"The user name or password is incorrect";
           }         
         }
       }

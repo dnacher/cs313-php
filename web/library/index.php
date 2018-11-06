@@ -10,7 +10,7 @@
       $errorMessage;
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
+        if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){session_start();
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
@@ -27,7 +27,7 @@
             $errorMessage = $row["name"];
             $userType = row["userType"];  
           }
-          if($errorMessage==1){
+          if(isset($errorMessage){
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

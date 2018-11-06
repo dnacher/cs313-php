@@ -5,35 +5,15 @@
   $txtUser = $_POST['user'];
   $txtUserType = $_POST['userType'];
   if(isset($txtUser)){
+    echo $txtUser . "<br>";
+    echo $txtUserType . "<br>";
     echo 'correct';    
   }else{
-    header("Location: index.php");
-    die();
+    echo $txtUser . "<br>";
+    echo $txtUserType . "<br>";
+    /*header("Location: index.php");
+    die();*/
   }    
-
-  //if($_SERVER["REQUEST_METHOD"] == "POST"){
-   // session_start();
-    /*if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
-      $txtPass = $_POST['txtPass'];
-      $txtPass = hash('ripemd160', $pass);
-      $$query = "SELECT count(*)
-                 FROM users
-                 WHERE name=:user
-                 AND password=:pass");
-      $statement = $db->prepare($query);
-      $statement->bindValue(':user', $txtUser);
-      $statement->bindValue(':pass', $txtPass);
-      $statement->execute();
-      $data=mysql_fetch_assoc($statement);
-      echo $data;
-    }else{
-      header("Location: index.php");
-      die();
-    }*/
-  /*}else{
-    header("Location: index.php");
-    die();
-  }*/
 ?>
 <!DOCTYPE html>
 <html>

@@ -11,12 +11,12 @@
       $good= false;
       $userType;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){session_start();
+        if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           echo "entre";
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];
           $txtPass = hash('ripemd160', $pass);
-          $query = 'SELECT count name as name, user_type_id as userType
+          $query = 'SELECT name as name, user_type_id as userType
                      FROM users
                      WHERE name=:user
                      AND password=:pass';

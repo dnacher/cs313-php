@@ -82,11 +82,7 @@
           
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
-              if($good){          
-                  $options = [
-                      'salt' => custom_function_for_salt(), //write your own code to generate a suitable salt
-                      'cost' => 12 // the default cost is 10
-                  ];
+              if($good){         
                   //$pass = hash('ripemd160', $pass);
                   $pass = password_hash($pass, PASSWORD_DEFAULT);
                   try{  

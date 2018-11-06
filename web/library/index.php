@@ -28,13 +28,13 @@
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $userType = row["userType"];  
             $good = true;
+            $errorMessage = "correct";
           }
           if($good){
             echo "aca3";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
-            die();  
           }else{
             $errorMessage = "The user name or password is incorrect";
           }         

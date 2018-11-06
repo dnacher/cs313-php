@@ -3,9 +3,10 @@
   $db = get_db();
 
   $good = TRUE;
+  $user = $pass = $userType = $description;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    $user = $pass = $userType = $description;
+    
     $userError = $passError;
     
     $description = $_POST["txtDescription"];
@@ -81,9 +82,13 @@
           
           <?php 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {              
-              if($good){                  
+              if($good){          
+                  $options = [
+                      'salt' => custom_function_for_salt(), //write your own code to generate a suitable salt
+                      'cost' => 12 // the default cost is 10
+                  ];
                   //$pass = hash('ripemd160', $pass);
-                  $pass = password_hash($pass);
+                  $pass = password_hash($pass, PASSWORD_DEFAULT);
                   try{  
                     $query = "INSERT INTO users (name, description, active, password,user_type_id)
                     VALUES ('$user', '$txtDescription', true, '$pass','$userType')";

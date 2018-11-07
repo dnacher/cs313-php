@@ -38,7 +38,7 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT us.user_id as id, us.name as userName, us.description as description, ust.name as userType
+        $statement = $db->prepare("SELECT us.user_id as id, us.name as user_name, us.description as description, ust.name as user_type
                                    FROM users us
                                    JOIN user_type ust on us.user_type_id=ust.user_type_id");
         $statement->execute();
@@ -46,8 +46,8 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';
-          echo        '<small>' . $row['userName'] . '</small>';
-          echo        '<h5 class="mb-1">' . $row['userType'] . '</h5>';
+          echo        '<small>' . $row['user_name'] . '</small>';
+          echo        '<h5 class="mb-1">' . $row['user_type'] . '</h5>';
           echo '</a>';          
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['description'] . '</p>';          

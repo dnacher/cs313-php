@@ -14,8 +14,8 @@
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
-         $pass;
-          $statement = $db->prepare("SELECT name, user_type_id, password
+         $pass = $user_id;
+          $statement = $db->prepare("SELECT user_id, name, user_type_id, password
                     FROM users
                     WHERE name='$txtUser'");
           $statement->execute();
@@ -23,11 +23,13 @@
             $userType = $row['user_type_id'];
             $errorMessage = "correct";
             $pass = $row['password'];
+            $user_id = $row['user_id'];
           }
           if(password_verify($txtPass,$pass)){
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
+            $_SESSION["user_id"] = $user_id;
             $good = true;
           }else{
             $errorMessage = "The user name or password is incorrect";

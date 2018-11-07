@@ -30,6 +30,7 @@
   <div>
 
     <h1>Items Type Available</h1><br>
+    <a href="/library/main.php">Home</a>
     <form action="/library/insertItemType.php" style="width: 50%">
       <button type="submit" class="btn alert-success">Add Item Type</button><br>        
     </form>

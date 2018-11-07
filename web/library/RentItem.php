@@ -4,6 +4,7 @@
   session_start();
   $txtUser = $_SESSION['user'];
   $txtUserType = $_SESSION['userType'];
+  $user_id = $_SESSION['user_id'];
   if(isset($txtUser)){
     echo $txtUser . "<br>";
     echo $txtUserType . "<br>";
@@ -44,7 +45,8 @@
         $statement = $db->prepare("SELECT i.item_id as item_id, it.name as item_type_name,i.name as item_name, au.name as author_name
                                    FROM item i
                                    JOIN author au on au.author_id=i.author_id
-                                   JOIN item_type it on i.item_type_id=it.item_type_id");
+                                   JOIN item_type it on i.item_type_id=it.item_type_id
+                                   WHERE i.item_id NOT IN(SELECT item_id from rent_table)");
         $statement->execute();
         echo '<div class="list-group" style="width: 50%">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
@@ -56,9 +58,10 @@
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';          
-          echo '<form action="deleteItem.php" method=POST>
+          echo '<form action="renting.php" method=POST>
                 <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
-                  <button type="submit" class="btn btn-danger">Delete</button><br><br>        
+                <input type="hidden" value="'. $user_id .'" name="item_type_name" />
+                  <button type="submit" class="btn btn-danger">Rent this Item</button><br><br>        
                 </form>';
         }
         echo '</div>';

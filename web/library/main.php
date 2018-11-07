@@ -4,6 +4,7 @@
   session_start();
   $txtUser = $_SESSION['user'];
   $txtUserType = $_SESSION['userType'];
+  $user_id = $_SESSION['user_id'];
   if(isset($txtUser)){
     echo "<div class='alert alert-success' role='alert'>";
     echo "Welcome $txtUser <br>";
@@ -29,15 +30,29 @@
 
 <body>
 
-  <form action='/library/manageItem.php' style='width: 50%' method="POST">
-    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Items</button><br><br>
-  </form>
-  <form action='/library/manageItemType.php' style='width: 50%' method="POST">
-    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Items Type</button><br><br>
-  </form>
-  <form action='/library/manageAuthor.php' style='width: 50%' method="POST">
-    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Authors</button><br><br>
-  </form>
+  <?php
+    if($txtUserType==1 || $txtUserType==4){
+      echo "<form action='/library/manageItem.php' style='width: 50%' method='POST'>";
+      echo "<button type='submit' class='btn alert-success' style='width:auto;'>Manage Items</button><br><br>";
+      echo "</form>";
+
+      echo "<form action='/library/manageItemType.php' style='width: 50%' method='POST'>";
+      echo "<button type='submit' class='btn alert-success' style='width:auto;'>Manage Items Type</button><br><br>";
+      echo "</form>";
+
+      echo "<form action='/library/manageAuthor.php' style='width: 50%' method='POST'>";
+      echo "<button type='submit' class='btn alert-success' style='width:auto;'>Manage Authors</button><br><br>";
+      echo "</form>";
+
+    }  
+
+    if($txtUserType==3){
+      echo "<form action='/library/rentItem.php' style='width: 50%' method='POST'>";
+      echo "<button type='submit' class='btn alert-success' style='width:auto;'>Rent an Item</button><br><br>";
+      echo "</form>";      
+    }
+
+  ?>
   
 <?php
 

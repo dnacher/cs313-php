@@ -37,7 +37,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Insert Item Type</title>
+    <title>Insert User</title>
     <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
@@ -48,7 +48,8 @@
   </head>
 
   <body>
-    <h2>Item Type</h2>
+    <h2>User</h2>
+    <a href="/library/main.php">Home</a>
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
           <div class="form-group">

@@ -31,6 +31,7 @@
   <div>
 
     <h1>Users</h1><br>
+    <a href="/library/main.php">Home</a>
 
     <form action="/library/insertUser.php" style="width: 50%">
       <button type="submit" class="btn alert-success">Add User</button><br>        

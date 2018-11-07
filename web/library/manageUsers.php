@@ -32,8 +32,8 @@
 
     <h1>Users</h1><br>
 
-    <form action="/library/insertAuthor.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Author</button><br>        
+    <form action="/library/insertUser.php" style="width: 50%">
+      <button type="submit" class="btn alert-success">Add User</button><br>        
     </form>
 
     <?php

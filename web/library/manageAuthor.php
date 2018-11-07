@@ -50,7 +50,7 @@
           echo '</a>';          
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['description'] . '</p>';          
-          echo '<form action="deleteItem.php" method=POST>
+          echo '<form action="deleteAuthor.php" method=POST>
                 <input type="hidden" value="'. $row['author_id'].'" name="author_id" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';

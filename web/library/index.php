@@ -14,22 +14,20 @@
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
-          $pass;
+         $pass;
           $statement = $db->prepare("SELECT name, user_type_id as userType, password
                     FROM users
                     WHERE name='$txtUser'");
           $statement->execute();
          while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $userType = row["userType"];
+            $userType = $row['userType'];
             $errorMessage = "correct";
-            $pass = row["password"];
-            echo "row userType $userType <br>";
-            echo "row password $pass <br><br>";
+            $pass = $row['password'];
           }
-          echo "txtpass $txtPass <br>";
-          echo "pass $pass <br>";
+          echo "pass $Pass <br>";
+          echo "userType $userType <br>";
           if(password_verify($txtPass,$pass)){
-            echo "aca";
+           
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

@@ -15,12 +15,12 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
          $pass;
-          $statement = $db->prepare("SELECT name, user_type_id as userType, password
+          $statement = $db->prepare("SELECT name, user_type_id, password
                     FROM users
                     WHERE name='$txtUser'");
           $statement->execute();
          while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $userType = $row['userType'];
+            $userType = $row['user_type_id'];
             $errorMessage = "correct";
             $pass = $row['password'];
           }

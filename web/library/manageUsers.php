@@ -38,9 +38,9 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT us.user_id,us.name, us.description,ust.usertype
-                                   FROM users as us
-                                   JOIN user_type as ust on us.user_type_id=ust.user_type_id");
+        $statement = $db->prepare("SELECT us.user_id, us.name, us.description, ust.usertype
+                                   FROM users us
+                                   JOIN user_type ust on us.user_type_id=ust.user_type_id");
         $statement->execute();
         echo '<div class="list-group" style="width: 50%">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          

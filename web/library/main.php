@@ -7,7 +7,7 @@
   if(isset($txtUser)){
     echo "<div class='alert alert-success' role='alert'>";
     echo "Welcome $txtUser <br>";
-    echo "</div>"
+    echo "</div>";
   }else{
     header("Location: index.php");
     die();

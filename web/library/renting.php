@@ -6,7 +6,7 @@ session_start();
   $txtUserType = $_SESSION['userType'];
   $user_id = $_SESSION['user_id'];
   if(isset($txtUser)){
-  	if(txtUserType!=3){
+  	if($txtUserType!=3){
   		//this page is only for students.
   		header("Location: index.php");
     	die();	

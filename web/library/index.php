@@ -9,7 +9,7 @@
       $db = get_db();
       $errorMessage;
       $good= false;
-      $userType;
+      $userType = $txtPass;
       if($_SERVER["REQUEST_METHOD"] == "POST"){
         if (isset($_POST['txtUser']) && isset($_POST['txtPass'])){
           $txtUser = $_POST['txtUser'];
@@ -28,17 +28,13 @@
             $errorMessage = "correct";
             $pass = row["pass"];
           }
-          $hash = password_hash($pass, PASSWORD_DEFAULT);
-          echo "txtpass " . $txtPass;
-          echo "<br>";
-          echo "hash " . $hash;
-          echo "<br>";
-          echo "pass" . $pass;
-          if(password_verify($pass,$hash)){
+          if(password_verify($txtPass,$pass)){
+            echo "aca";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
           }else{
+            echo "aca2";
             $errorMessage = $txtPass; //"The user name or password is incorrect";
           }         
         }

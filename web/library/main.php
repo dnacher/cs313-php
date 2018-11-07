@@ -28,43 +28,31 @@
 </head>
 
 <body>
-  <div>
 
-    <h1>Books Available</h1><br>
+  <form action='/library/manageItem.php' style='width: 50%' method="POST">
+    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Items</button><br><br>
+  </form>
+  <form action='/library/manageItemType.php' style='width: 50%' method="POST">
+    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Items Type</button><br><br>
+  </form>
+  <form action='/library/manageAuthor.php' style='width: 50%' method="POST">
+    <button type='submit' class='btn alert-success' style='width:auto;'>Manage Authors</button><br><br>
+  </form>
+  
+<?php
 
-    <form action="/library/insertItem.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item</button><br><br>        
-    </form>
-    <form action="/library/insertAuthor.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Author</button><br><br>        
-    </form>
-    <form action="/library/insertItemType.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item Type</button><br><br>        
-    </form>
+//check if the user is admin.
+if($txtUserType==1){
+  echo "<form action='/library/manageUsers.php' style='width: 50%' method='POST'>";
+  echo "<button type='submit' class='btn alert-success' style='width:auto;'>Manage Users</button><br><br>";
+  echo "</form>";
 
-    <?php
+  echo "<form action='/library/manageUsersType.php' style='width: 50%' method='POST'>";
+  echo "<button type='submit' class='btn alert-success' style='width:auto;'>Manage Users Types</button><br><br>";
+  echo "</form>";
 
-        $statement = $db->prepare("SELECT i.item_id as item_id, it.name as item_type_name,i.name as item_name, au.name as author_name
-                                   FROM item i
-                                   JOIN author au on au.author_id=i.author_id
-                                   JOIN item_type it on i.item_type_id=it.item_type_id");
-        $statement->execute();
-        echo '<div class="list-group" style="width: 50%">';
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
-          echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
-          echo '<div class="d-flex justify-content-between">';
-          echo        '<small>' . $row['item_id'] . '</small>';
-          echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
-          echo '</a>';          
-          echo  '</div>';
-          echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
-          echo  '<small>' . $row['item_type_name']. '</small>';          
-          echo '<form action="deleteItem.php" method=POST>
-                <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
-                  <button type="submit" class="btn btn-danger">Delete</button><br><br>        
-                </form>';
-        }
-        echo '</div>';
-    ?>
+}
 
-  </div>
+?>
+  
+</body>

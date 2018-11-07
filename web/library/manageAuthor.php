@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Manage Item</title>
+  <title>Manage Authors</title>
     <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
@@ -30,37 +30,28 @@
 <body>
   <div>
 
-    <h1>Items Available</h1><br>
+    <h1>Authors</h1><br>
 
-    <form action="/library/insertItem.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item</button><br>
-    </form>
     <form action="/library/insertAuthor.php" style="width: 50%">
       <button type="submit" class="btn alert-success">Add Author</button><br>        
-    </form>
-    <form action="/library/insertItemType.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item Type</button><br>        
     </form>
 
     <?php
 
-        $statement = $db->prepare("SELECT i.item_id as item_id, it.name as item_type_name,i.name as item_name, au.name as author_name
-                                   FROM item i
-                                   JOIN author au on au.author_id=i.author_id
-                                   JOIN item_type it on i.item_type_id=it.item_type_id");
+        $statement = $db->prepare("SELECT author_id,name, description
+                                   FROM author");
         $statement->execute();
         echo '<div class="list-group" style="width: 50%">';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';
-          echo        '<small>' . $row['item_id'] . '</small>';
-          echo        '<h5 class="mb-1">' . $row['item_name'] . '</h5>';
+          echo        '<small>' . $row['author_id'] . '</small>';
+          echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
           echo '</a>';          
           echo  '</div>';
-          echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
-          echo  '<small>' . $row['item_type_name']. '</small>';          
+          echo  '<p class="mb-1">' . $row['description] . '</p>';          
           echo '<form action="deleteItem.php" method=POST>
-                <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
+                <input type="hidden" value="'. $row['author_id'].'" name="author_id" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';
         }

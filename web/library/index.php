@@ -15,9 +15,9 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
           $pass;
-          $query = 'SELECT name, user_type_id as userType, password
-                     FROM users
-                     WHERE name=:user';
+          $query = "SELECT name, user_type_id as userType, password
+                    FROM users
+                    WHERE name=:user";
           $statement = $db->prepare($query);
           $statement->bindValue(':user', $txtUser);          
           $statement->execute();

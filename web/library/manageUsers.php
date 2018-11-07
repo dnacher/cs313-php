@@ -38,7 +38,7 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT us.user_id, us.name, us.description, ust.name
+        $statement = $db->prepare("SELECT us.user_id as id, us.name as userName, us.description as description, ust.name as userType
                                    FROM users us
                                    JOIN user_type ust on us.user_type_id=ust.user_type_id");
         $statement->execute();
@@ -46,13 +46,13 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){          
           echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">';
           echo '<div class="d-flex justify-content-between">';
-          echo        '<small>' . $row['author_id'] . '</small>';
-          echo        '<h5 class="mb-1">' . $row['name'] . '</h5>';
+          echo        '<small>' . $row['userName'] . '</small>';
+          echo        '<h5 class="mb-1">' . $row['userType'] . '</h5>';
           echo '</a>';          
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['description'] . '</p>';          
           echo '<form action="deleteUser.php" method=POST>
-                <input type="hidden" value="'. $row['user_id'].'" name="user_id" />
+                <input type="hidden" value="'. $row['id'].'" name="id" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';
         }

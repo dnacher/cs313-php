@@ -38,7 +38,7 @@
 
     <?php
 
-        $statement = $db->prepare("SELECT us.user_id, us.name, us.description, ust.usertype
+        $statement = $db->prepare("SELECT us.user_id, us.name, us.description, ust.name
                                    FROM users us
                                    JOIN user_type ust on us.user_type_id=ust.user_type_id");
         $statement->execute();

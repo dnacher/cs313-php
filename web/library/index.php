@@ -17,9 +17,8 @@
           $pass;
           $query = "SELECT name, user_type_id as userType, password
                     FROM users
-                    WHERE name=:user";
+                    WHERE name=$txtUser";
           $statement = $db->prepare($query);
-          $statement->bindValue(':user', $txtUser);          
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $userType = row["userType"];

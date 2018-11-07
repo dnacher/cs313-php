@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Manage Authors</title>
+  <title>Manage Users</title>
     <link rel="stylesheet" href="/library/css/style.css">
 
     <!-- BEGIN bootstrap -->     
@@ -30,7 +30,7 @@
 <body>
   <div>
 
-    <h1>Authors</h1><br>
+    <h1>Users</h1><br>
 
     <form action="/library/insertAuthor.php" style="width: 50%">
       <button type="submit" class="btn alert-success">Add Author</button><br>        

@@ -5,9 +5,9 @@
   $txtUser = $_SESSION['user'];
   $txtUserType = $_SESSION['userType'];
   if(isset($txtUser)){
-    echo "User $txtUser <br>";
-    echo "user type $txtUserType <br>";
-    echo 'correct';    
+    echo "<div class='alert alert-success' role='alert'>";
+    echo "Welcome $txtUser <br>";
+    echo "</div>"
   }else{
     header("Location: index.php");
     die();

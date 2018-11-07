@@ -27,7 +27,7 @@
           echo "pass $Pass <br>";
           echo "userType $userType <br>";
           if(password_verify($txtPass,$pass)){
-           
+           echo "aca";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;

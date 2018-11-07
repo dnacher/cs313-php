@@ -24,16 +24,13 @@
             $errorMessage = "correct";
             $pass = $row['password'];
           }
-          echo "pass $Pass <br>";
-          echo "userType $userType <br>";
           if(password_verify($txtPass,$pass)){
-           echo "aca";
             session_start();
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
+            $good = true;
           }else{
-            echo "aca2";
-            $errorMessage = $txtPass; //"The user name or password is incorrect";
+            $errorMessage = "The user name or password is incorrect";
           }         
         }
       }

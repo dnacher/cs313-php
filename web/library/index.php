@@ -29,11 +29,11 @@
             $pass = row["pass"];
           }
           $hash = password_hash($pass, PASSWORD_DEFAULT);
-          echo $txtPass;
+          echo "txtpass " . $txtPass;
           echo "<br>";
-          echo $hash;
+          echo "hash " . $hash;
           echo "<br>";
-          echo $pass;
+          echo "pass" . $pass;
           if(password_verify($pass,$hash)){
             session_start();
             $_SESSION["user"] = $txtUser;

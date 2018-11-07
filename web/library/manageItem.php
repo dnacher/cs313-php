@@ -5,12 +5,14 @@
   $txtUser = $_SESSION['user'];
   $txtUserType = $_SESSION['userType'];
   if(isset($txtUser)){
-    echo "User $txtUser <br>";
-    echo "user type $txtUserType <br>";
+    echo $txtUser . "<br>";
+    echo $txtUserType . "<br>";
     echo 'correct';    
   }else{
-    header("Location: index.php");
-    die();
+    echo $txtUser . "<br>";
+    echo $txtUserType . "<br>";
+    /*header("Location: index.php");
+    die();*/
   }    
 ?>
 <!DOCTYPE html>

@@ -19,7 +19,7 @@
                     FROM users
                     WHERE name='$txtUser'");
           $statement->execute();
-          while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $userType = row["userType"];
             $errorMessage = "correct";
             $pass = row["password"];

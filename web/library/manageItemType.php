@@ -49,7 +49,7 @@
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['description'] . '</p>';
           echo '<form action="deleteItemType.php" method=POST>
-                <input type="hidden" value="'. $row['item__type_id'].'" name="item_type_id" />
+                <input type="hidden" value="'. $row['item_type_id'].'" name="item_type_id" />
                   <button type="submit" class="btn btn-danger">Delete</button><br><br>        
                 </form>';
         }

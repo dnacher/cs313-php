@@ -15,10 +15,9 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
           $pass;
-          $query = "SELECT name, user_type_id as userType, password
+          $statement = $db->prepare("SELECT name, user_type_id as userType, password
                     FROM users
-                    WHERE name='$txtUser'";
-          $statement = $db->prepare($query);
+                    WHERE name='$txtUser'");
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $userType = row["userType"];

@@ -78,7 +78,7 @@
               ?>
             </select>
           </div>
-          <input type="submit" class="btn btn-primary" value="Add Item"><br>
+          <input type="submit" class="btn btn-primary" value="Create User"><br>
 
           
           <?php 

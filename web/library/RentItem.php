@@ -33,13 +33,6 @@
 
     <h1>Items Available</h1><br>
     <a href="/library/main.php">Home</a>
-    <form action="/library/insertItem.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item</button><br>
-    </form>
-    <form action="/library/insertItemType.php" style="width: 50%">
-      <button type="submit" class="btn alert-success">Add Item Type</button><br>        
-    </form>
-
     <?php
 
         $statement = $db->prepare("SELECT i.item_id as item_id, it.name as item_type_name,i.name as item_name, au.name as author_name
@@ -58,9 +51,9 @@
           echo  '</div>';
           echo  '<p class="mb-1">' . $row['author_name'] . '</p>';
           echo  '<small>' . $row['item_type_name']. '</small>';          
-          echo '<form action="renting.php" method=POST>
-                <input type="hidden" value="'. $row['item_id'].'" name="id_item" />
-                <input type="hidden" value="'. $user_id .'" name="item_type_name" />
+          echo '<form action="renting.php" method='POST'>
+                <input type="hidden" value="'. $row['item_id'].'" name="item_id" />
+                <input type="hidden" value="'. $user_id .'" name="user_id" />
                   <button type="submit" class="btn btn-danger">Rent this Item</button><br><br>        
                 </form>';
         }

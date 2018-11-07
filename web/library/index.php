@@ -17,14 +17,12 @@
           $pass;
           $query = 'SELECT name, user_type_id as userType, password as pass
                      FROM users
-                     WHERE name=:user
-                     AND password=:pass';
+                     WHERE name=:user';
           $statement = $db->prepare($query);
-          $statement->bindValue(':user', $txtUser);
-          $statement->bindValue(':pass', $txtPass);
+          $statement->bindValue(':user', $txtUser);          
           $statement->execute();
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            $userType = row["userType"];            
+            $userType = row["userType"];
             $errorMessage = "correct";
             $pass = row["pass"];
           }

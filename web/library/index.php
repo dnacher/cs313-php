@@ -29,7 +29,6 @@
             $_SESSION["user"] = $txtUser;
             $_SESSION["userType"] = $userType;
             $good = true;
-            die();
           }else{
             $errorMessage = "The user name or password is incorrect";
           }         

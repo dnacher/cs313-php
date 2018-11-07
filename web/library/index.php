@@ -15,7 +15,7 @@
           $txtUser = $_POST['txtUser'];
           $txtPass = $_POST['txtPass'];         
           $pass;
-          $query = 'SELECT name, user_type_id as userType, password as pass
+          $query = 'SELECT name, user_type_id as userType, password
                      FROM users
                      WHERE name=:user';
           $statement = $db->prepare($query);
@@ -24,10 +24,12 @@
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             $userType = row["userType"];
             $errorMessage = "correct";
-            $pass = row["pass"];
+            $pass = row["password"];
+            echo "row userType $userType <br>";
+            echo "row password $pass <br><br>";
           }
-          echo "txtpass $txtPass";
-          echo "pass $pass";
+          echo "txtpass $txtPass <br>";
+          echo "pass $pass <br>";
           if(password_verify($txtPass,$pass)){
             echo "aca";
             session_start();

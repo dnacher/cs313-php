@@ -47,7 +47,7 @@
     }  
 
     if($txtUserType==3){
-      echo "<form action='/library/rentItem.php' style='width: 50%' method='POST'>";
+      echo "<form action='/library/RentItem.php' style='width: 50%' method='POST'>";
       echo "<button type='submit' class='btn alert-success' style='width:auto;'>Rent an Item</button><br><br>";
       echo "</form>";      
     }

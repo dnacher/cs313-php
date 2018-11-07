@@ -28,6 +28,8 @@
             $errorMessage = "correct";
             $pass = row["pass"];
           }
+          echo "txtpass $txtPass";
+          echo "pass $pass";
           if(password_verify($txtPass,$pass)){
             echo "aca";
             session_start();

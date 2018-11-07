@@ -23,8 +23,8 @@ $user_id = $_POST['user_id'];
 $item_id = $_POST['item_id'];
 
 try{
-	$date1 = date("y.m.d");
-	$date2 = $d=strtotime("+3 Days");
+	$date1 = date("Y-m-d");
+	$date2 = date('Y-m-d', strtotime("+7 days"));
 	echo "d1 $date1 <br>";
 	echo "d2 $date2 <br>";
 	echo "uid $user_id <br>";
